@@ -1,0 +1,42 @@
+{
+  "name": "next-contentful-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lintjs": "npx eslint '**/*.js' --fix",
+    "lintcss": "npx stylelint '**/*.scss' --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npx eslint . --fix",
+      "git add"
+    ],
+    "*.{css,scss}": [
+      "npx stylelint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "contentful": "^8.4.2",
+    "next": "^10.2.3",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "sass": "^1.35.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
+  }
+}
