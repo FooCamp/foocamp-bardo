@@ -36,7 +36,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 ## Credentials
 
-To run the example proyect correctly an `.env.local` file is needed, download it [here](https://drive.google.com/file/d/1H-apqKdUFl51ax-PHcf88jlIp5_g8tW6/view?usp=sharing)
+To run the example proyect correctly an `.env.local` file is needed, download it [here](https://drive.google.com/file/d/1zWk6ysqoh_LAyrQknk0ziETF39nCKdno/view?usp=sharing)
 
 place this file in the root directory and change the name from `.env.local.example` to `.env.local`
 
