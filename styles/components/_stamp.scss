@@ -1,0 +1,17 @@
+.Sello {
+  width: 78px;
+}
+
+@media screen and (min-width: ($tablet-viewport+1)) {
+  .Sello {
+    width: 115px;
+
+    &--right {
+      transform: translateX(50%);
+    }
+
+    &--left {
+      transform: translateX(-50%);
+    }
+  }
+}
