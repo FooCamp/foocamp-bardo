@@ -14,6 +14,13 @@
   --smallest-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 
   ///Fonts
-  --poppins: 'Poppins', sans-serif;
-  --crete-round: 'Crete Round', sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --crete-round: "Crete Round", sans-serif;
 }
+
+$mobile-viewport: 375px;
+$tablet-viewport: 768px;
+$desktop-viewport: 1440px;
+
+$desktop-margin: 24px;
+$mobile-margin: 16px;
