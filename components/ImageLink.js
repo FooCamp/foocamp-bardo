@@ -1,4 +1,5 @@
-// import Link from "next/link";
+import Link from 'next/link';
+
 export default function ImageLink({
   url,
   linkUrl,
@@ -6,8 +7,11 @@ export default function ImageLink({
   className,
 }) {
   return (
-    <a href={linkUrl} className={className}>
-      <img src={url} alt={alternativeText} />
-    </a>
+    <Link href={linkUrl}>
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+      <a className={className}>
+        <img src={url} alt={alternativeText} />
+      </a>
+    </Link>
   );
 }
