@@ -2,6 +2,10 @@
 @import "./base/base";
 @import "./base/typography";
 @import "./components/stamp";
+@import "./components/socialMedia";
+@import "./components/sitemap";
+@import "./layout/container";
+@import "./layout/footer";
 
 body {
   background-color: var(--coral);
@@ -51,14 +55,6 @@ header span:last-child {
 header h2 {
   font-size: 1.2em;
   font-weight: 400;
-}
-
-footer {
-  background: #111;
-  color: #bbb;
-  padding: 40px;
-  text-align: center;
-  margin-top: auto;
 }
 
 .page-content {

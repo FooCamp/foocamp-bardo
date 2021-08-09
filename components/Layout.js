@@ -1,6 +1,7 @@
 import Navigation from './Navigation';
+import Footer from './Footer';
 
-export default function Layout({ children }) {
+export default function Layout({ data, children }) {
   return (
     <div className="layout">
       <Navigation />
@@ -9,9 +10,7 @@ export default function Layout({ children }) {
         { children }
       </div>
 
-      <footer>
-        <p>A footer</p>
-      </footer>
+      <Footer data={data} />
     </div>
   );
 }

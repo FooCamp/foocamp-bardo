@@ -1,0 +1,31 @@
+.Sitemap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+
+  &__link {
+    color: var(--black);
+    margin-bottom: 12px;
+    display: inline-block;
+    font-size: 12px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (min-width: ($tablet-viewport+1)) {
+  .Sitemap {
+    flex-direction: row;
+    margin-bottom: 42px;
+
+    &__list {
+      flex-grow: 1;
+    }
+
+    &__link {
+      font-size: 16px;
+    }
+  }
+}
