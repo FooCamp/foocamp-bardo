@@ -18,9 +18,9 @@ export default function Navigation({ props }) {
         url={logo.fields.image.fields.file.url}
         alternativeText={logo.fields.altText}
         linkUrl="/"
-        className="navegation__logo"
+        className="navigation__logo"
       />
-      <ul className={openMenu ? 'navegation menuDisplay' : 'navegation'}>
+      <ul className={openMenu ? 'navigation menuDisplay' : 'navigation'}>
         {navLinks.map((component) => (
           <NavLink
             key={component.fields.identifier}
@@ -30,7 +30,11 @@ export default function Navigation({ props }) {
         ))}
       </ul>
 
-      <button type="button" className="hamburger" onClick={handleMenuMobile}>
+      <button
+        type="button"
+        className="header__burguer-menu"
+        onClick={handleMenuMobile}
+      >
         ☰
       </button>
     </nav>
