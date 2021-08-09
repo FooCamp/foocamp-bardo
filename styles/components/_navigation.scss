@@ -1,0 +1,144 @@
+@import "../abstracts/variables";
+@import "../base/base";
+
+.navegation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  &__item {
+    margin-right: 22px;
+    text-decoration: none;
+
+    li {
+      color: var(--tuscany);
+      display: block;
+      padding: 4px;
+      z-index: 1;
+      text-decoration: none;
+      letter-spacing: 0.005em;
+      position: relative;
+      font-weight: normal;
+      transition: all 0.5s;
+    }
+
+    li::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      height: 1px;
+      content: ".";
+      color: transparent;
+      background: var(--coral);
+      visibility: none;
+      opacity: 0;
+      z-index: -1;
+      transition: all 0.5s;
+    }
+
+    li:hover {
+      color: var(--cod-gray);
+    }
+
+    li:hover::after {
+      opacity: 0.5;
+      visibility: visible;
+      height: 100%;
+    }
+
+    li:focus::after {
+      opacity: 0.5;
+      visibility: visible;
+      height: 100%;
+    }
+
+    li::before {
+      transition: all 0.5s;
+    }
+  }
+}
+
+.navegation__logo {
+  margin-left: 41px;
+  width: 60.25px;
+  height: 63.94px;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--pearl-bush);
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+}
+
+.hamburger {
+  list-style-type: none;
+  border: none;
+  box-sizing: border-box;
+  display: none;
+  cursor: pointer;
+  color: var(--tuscany);
+  font-size: 24px;
+  border-radius: 3px;
+  background: var(--pearl-bush);
+  padding: 4px 6px;
+  margin-right: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: rgb(255, 118, 84, 0.5);
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .navegation {
+    position: absolute;
+    display: none;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+    background-color: var(--pearl-bush);
+    justify-self: flex-start;
+    top: 64px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+
+    &__item {
+      margin: 0;
+      text-decoration: none;
+    }
+  }
+
+  .navegation li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+  }
+
+  .navegation__logo {
+    margin-left: 16px;
+  }
+
+  .menuDisplay {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

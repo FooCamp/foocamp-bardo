@@ -1,5 +1,6 @@
-@import './abstracts/variables';
-@import './base/base';
+@import "./abstracts/variables";
+@import "./components/navigation";
+@import "./base/base";
 
 body {
   background-color: var(--coral);
