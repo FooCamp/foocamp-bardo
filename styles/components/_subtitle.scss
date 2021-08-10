@@ -1,0 +1,23 @@
+.subtitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.0015em;
+  color: var(--paco);
+  margin: 0;
+
+  b {
+    background-color: var(--pink);
+    font-weight: normal;
+  }
+}
+
+@media screen and (min-width: ($tablet-viewport+1)) {
+  .subtitle {
+    font-weight: normal;
+    font-size: 2.125rem;
+    line-height: 3.1875rem;
+    letter-spacing: 0.0025em;
+  }
+}
