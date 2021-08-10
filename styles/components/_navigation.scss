@@ -1,0 +1,142 @@
+.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  &__item {
+    margin-right: 22px;
+    text-decoration: none;
+
+    a {
+      color: var(--tuscany);
+      display: block;
+      padding: 4px;
+      z-index: 1;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: 0.005em;
+      position: relative;
+      font-weight: normal;
+      transition: all 0.5s;
+    }
+
+    a::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      height: 1px;
+      content: ".";
+      color: transparent;
+      background-color: var(--coral);
+      visibility: none;
+      opacity: 0;
+      z-index: -1;
+      transition: all 0.5s;
+    }
+
+    a:hover {
+      color: var(--cod-gray);
+    }
+
+    a:hover::after {
+      opacity: 0.5;
+      visibility: visible;
+      height: 100%;
+    }
+
+    a:focus::after {
+      opacity: 0.5;
+      visibility: visible;
+      height: 100%;
+    }
+
+    a::before {
+      transition: all 0.5s;
+    }
+  }
+}
+
+.navigation__logo {
+  margin-left: 41px;
+  width: 60.25px;
+  height: 63.94px;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--pearl-bush);
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+
+  &__burguer-menu {
+    list-style-type: none;
+    border: none;
+    box-sizing: border-box;
+    display: none;
+    cursor: pointer;
+    color: var(--tuscany);
+    font-size: 24px;
+    border-radius: 3px;
+    background-color: var(--pearl-bush);
+    padding: 4px 6px;
+    margin-right: 17px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: rgb(255, 118, 84, 0.5);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-viewport) {
+  .navigation {
+    position: absolute;
+    display: none;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+    background-color: var(--pearl-bush);
+    justify-self: flex-start;
+    top: 64px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+
+    &__item {
+      margin: 0;
+      text-decoration: none;
+    }
+  }
+
+  .navigation a {
+    list-style-type: none;
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+  }
+
+  .navigation__logo {
+    margin-left: 16px;
+  }
+
+  .menuDisplay {
+    display: block;
+  }
+
+  .header__burguer-menu {
+    display: block;
+  }
+}
