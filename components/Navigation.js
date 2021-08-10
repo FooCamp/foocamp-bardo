@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import headerContentful from '../utils/contentful';
+import { headerContentful } from '../utils/contentful';
 import NavLink from './NavLink';
 import ImageLink from './ImageLink';
 

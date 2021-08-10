@@ -1,20 +1,16 @@
-.SocialMedia {
+.social-media {
   display: flex;
   flex-wrap: wrap;
 
   &__link {
     display: inline-block;
     margin-right: 9px;
-  }
-
-  &__img {
     width: 24px;
-    vertical-align: top;
   }
 }
 
 @media screen and (min-width: ($tablet-viewport+1)) {
-  .SocialMedia {
+  .social-media {
     &__link {
       margin-right: 18px;
     }

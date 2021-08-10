@@ -1,6 +1,6 @@
 export default function Stamp({ position }) {
-  const positionClass = position ? `Sello--${position}` : '';
+  const stampClass = position ? `stamp stamp--${position}` : 'stamp';
   return (
-    <img src="/sello.svg" alt="Se" className={`Sello ${positionClass}`} />
+    <img src="/sello.svg" alt="Sello de Bardo" className={`${stampClass}`} />
   );
 }

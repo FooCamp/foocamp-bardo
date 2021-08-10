@@ -1,9 +1,9 @@
-.Sello {
+.stamp {
   width: 78px;
 }
 
 @media screen and (min-width: ($tablet-viewport+1)) {
-  .Sello {
+  .stamp {
     width: 115px;
 
     &--right {

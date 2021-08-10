@@ -1,4 +1,4 @@
-.Container {
+.container {
   max-width: 100%;
   padding: 0 $mobile-margin;
   width: 100%;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (min-width: ($tablet-viewport+1)) {
-  .Container {
+  .container {
     max-width: $desktop-viewport;
     padding: 0 $desktop-margin;
   }
