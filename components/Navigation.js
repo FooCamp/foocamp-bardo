@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { headerContentful } from '../utils/contentful';
+import { getContentfulHeaderData } from '../utils/contentful';
 import NavLink from './NavLink';
 import ImageLink from './ImageLink';
 
 export default function Navigation({ props }) {
   const [openMenu, setOpenMenu] = useState(false);
-  const dataContentful = headerContentful(props);
+  const dataContentful = getContentfulHeaderData(props);
   const { logo, navLinks } = dataContentful;
 
   const handleMenuMobile = () => {
