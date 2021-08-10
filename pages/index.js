@@ -6,12 +6,14 @@ export const getServerSideProps = async () => {
   return {
     props: {
       data: pageData,
-      components: pageData.fields.components,
+      components: []/* pageData.fields.components */,
     },
   };
 };
 
-export default function Recipes({ components }) {
+export default function Recipes({ components, data }) {
+  console.log(data);
+
   return (
     <div className="home">
       <h1>
