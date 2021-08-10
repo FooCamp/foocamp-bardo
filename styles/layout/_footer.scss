@@ -1,4 +1,4 @@
-.Footer {
+.footer {
   background: var(--white);
   color: var(--black);
 
@@ -37,13 +37,13 @@
     color: var(--pueblo);
     margin: 0 0 33px;
     display: block;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: normal;
   }
 }
 
 @media screen and (min-width: ($tablet-viewport+1)) {
-  .Footer {
+  .footer {
     &__content {
       padding: 53px 0 29px;
       grid-template-columns: repeat(12, 1fr);
@@ -75,7 +75,7 @@
     &__title {
       letter-spacing: 0.4em;
       margin: 38px 0;
-      font-size: 16px;
+      font-size: 1rem;
     }
   }
 }

@@ -1,24 +1,23 @@
-import Link from 'next/link';
+import ImageLink from './ImageLink';
 
 export default function SocialMedia({ socialNetworksList }) {
   return (
-    <ul className="SocialMedia">
+    <ul className="social-media">
       {socialNetworksList.map((social) => {
         const {
           identifier, linkUrl, image, altText,
         } = social.fields;
         const { url } = image.fields.file;
         return (
-          <li className="SocialMedia__element" key={identifier}>
-            <Link href={linkUrl}>
-              <a className="SocialMedia__link" target="_blank" rel="noreferrer" href="/">
-                <img
-                  src={url}
-                  alt={altText}
-                  className="SocialMedia__img"
-                />
-              </a>
-            </Link>
+          <li className="social-media__element" key={identifier}>
+            <ImageLink
+              url={url}
+              linkUrl={linkUrl}
+              alternativeText={altText}
+              className="social-media__link"
+              target="_blank"
+              rel="noreferrer"
+            />
           </li>
         );
       })}
