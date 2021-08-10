@@ -3,9 +3,11 @@ import Navigation from './Navigation';
 export default function Layout({ children }) {
   return (
     <div className="layout">
-      <Navigation {...children} />
+      <Navigation />
 
-      <div className="page-content">{children}</div>
+      <div className="page-content">
+        { children }
+      </div>
 
       <footer>
         <p>A footer</p>
