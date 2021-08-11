@@ -10,3 +10,13 @@ export function getContentfulHeroData(data) {
   dataContentful.logo = data.data.items[0].fields.components[1].fields;
   return dataContentful;
 }
+
+export function getContentfulFooterData(data) {
+  const footerData = data.items[0].fields.components[5].fields;
+  return footerData;
+}
+
+export function getContentfulProfiles(data) {
+  dataContentful.profiles = data.data.items[0].fields.components[2].fields.sectionComponents;
+  return dataContentful;
+}
