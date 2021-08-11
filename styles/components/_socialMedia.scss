@@ -1,0 +1,18 @@
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__link {
+    display: inline-block;
+    margin-right: 9px;
+    width: 24px;
+  }
+}
+
+@media screen and (min-width: ($tablet-viewport+1)) {
+  .social-media {
+    &__link {
+      margin-right: 18px;
+    }
+  }
+}
