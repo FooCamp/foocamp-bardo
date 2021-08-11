@@ -7,7 +7,7 @@ export function getContentfulHeaderData(data) {
 }
 
 export function getContentfulHeroData(data) {
-  dataContentful.logo = data.data.items[0].fields.components[1].fields;
+  dataContentful.hero = data.data.items[0].fields.components[1].fields;
   return dataContentful;
 }
 

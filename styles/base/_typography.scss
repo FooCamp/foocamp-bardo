@@ -1,2 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap");
+@import "../abstracts/mixins";
+
+.hero {
+  &__tag {
+    padding: 0;
+    margin: 0;
+
+    &--home {
+      @include font-overline;
+
+      color: var(--pueblo);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+
+    &--home {
+      @include font-h3;
+
+      color: var(--tuscany);
+    }
+  }
+
+  &__body {
+    margin: 0;
+    padding: 0;
+
+    &--home {
+      @include font-subtitle1;
+
+      color: var(--cod-gray);
+
+      b {
+        background-color: var(--pink);
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-viewport) {
+  .hero {
+    &__title {
+      &--home {
+        @include font-h3;
+      }
+    }
+
+    &__body {
+      &--home {
+        @include font-h6;
+      }
+    }
+  }
+}
