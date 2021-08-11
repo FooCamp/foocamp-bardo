@@ -1,12 +1,19 @@
+// abstracts
 @import "./abstracts/variables";
-@import "./base/base";
+
+// base
 @import "./base/typography";
+@import "./base/base";
+
+// layout
+@import "./layout/layout";
+@import "./layout/container";
+@import "./layout/footer";
+
+// components
 @import "./components/navigation";
 @import "./components/stamp";
 @import "./components/socialMedia";
 @import "./components/sitemap";
 @import "./components/title";
 @import "./components/subtitle";
-@import "./layout/layout";
-@import "./layout/container";
-@import "./layout/footer";
