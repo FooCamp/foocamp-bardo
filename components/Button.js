@@ -1,16 +1,7 @@
-export default function Button({ children, link, buttonstyle }) {
-  const openInNewTab = (url) => {
-    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
-    if (newWindow) newWindow.opener = null;
-  };
-
+export default function Button({ children, buttonstyle, onclick }) {
   return (
     <div className="button__container">
-      <button
-        type="button"
-        className={buttonstyle}
-        onClick={() => openInNewTab({ link })}
-      >
+      <button type="button" className={buttonstyle} onClick={onclick}>
         {children}
       </button>
     </div>
