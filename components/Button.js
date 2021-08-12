@@ -1,11 +1,18 @@
-export default function Button({
-  children, link, backgroundstyle, textstyle,
-}) {
+export default function Button({ children, link, buttonstyle }) {
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (newWindow) newWindow.opener = null;
+  };
+
   return (
-    <div className={backgroundstyle}>
-      <a href={link}>
-        <span className={textstyle}>{children}</span>
-      </a>
+    <div className="button__container">
+      <button
+        type="button"
+        className={buttonstyle}
+        onClick={() => openInNewTab({ link })}
+      >
+        {children}
+      </button>
     </div>
   );
 }
