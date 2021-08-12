@@ -41,13 +41,12 @@
   display: flex;
   justify-content: center;
   color: var(--pueblo);
-  font-weight: regular;
   font-size: 24px;
   opacity: 1;
   text-align: left;
   align-items: center;
   line-height: 36px;
-  height: 100px;
+  height: 90px;
   word-spacing: 0.0015em;
 
   b {
@@ -60,13 +59,11 @@
 
 .profile__description {
   display: flex;
-  font-weight: regular;
   font-size: 16px;
   opacity: 1;
   text-align: center;
   font-style: normal;
   line-height: 24px;
-  align-items: center;
   letter-spacing: 0.005em;
   color: var(--cod-gray);
   height: 112px;

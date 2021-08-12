@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 2px;
+  top: 5px;
 }
 
 .button {
@@ -13,9 +13,10 @@
   align-items: center;
   width: 168px;
   height: 45px;
-  background: #be482c;
-  color: white;
+  background: var(--tuscany);
+  color: var(--white);
   text-align: center;
   font-size: 14px;
   cursor: pointer;
+  border: 0;
 }
