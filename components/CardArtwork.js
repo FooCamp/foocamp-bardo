@@ -6,6 +6,7 @@ export default function CardArtwork({ artwork }) {
   } = artwork.fields;
   const { title, file: { url } } = cardImage.fields;
   const { buttonText } = cardComponents.fields;
+  const description = cardDescription.length > 180 ? `${cardDescription.substring(0, 180)}...` : cardDescription;
   return (
     <div className="card-artwork">
       <div className="card-artwork__header">
@@ -15,7 +16,7 @@ export default function CardArtwork({ artwork }) {
         <div className="card-artwork__details">
           <div className="card-artwork__title">{cardTitle}</div>
           <Caption>{ author }</Caption>
-          <Caption>{ cardDescription }</Caption>
+          <Caption>{ description }</Caption>
         </div>
       </div>
       <div className="card-artwork__footer">
