@@ -17,6 +17,6 @@ export function getContentfulFooterData(data) {
 }
 
 export function getContentfulProfiles(data) {
-  dataContentful.profiles = data.data.items[0].fields.components[2].fields.sectionComponents;
-  return dataContentful;
+  const profiles = data.data.items[0].fields.components[2].fields;
+  return profiles;
 }
