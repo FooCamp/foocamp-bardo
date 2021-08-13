@@ -28,7 +28,7 @@ export default function Footer({ data }) {
             </div>
           </div>
           <div className="footer__stamp">
-            <Stamp position="right" />
+            <Stamp position="right" size="small" />
           </div>
           <p className="footer__copy">
             {copyrightStatement}
