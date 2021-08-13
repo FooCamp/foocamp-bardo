@@ -1,0 +1,94 @@
+.profile {
+  width: 330px;
+  height: 572px;
+  background: var(--white);
+  opacity: 1;
+  box-shadow: var(--small-box-shadow);
+  overflow: hidden;
+  flex-direction: column;
+
+  &__container {
+    width: 100%;
+    height: 718px;
+    background: var(--white);
+    opacity: 1;
+    position: relative;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__image {
+    width: 533px;
+    height: 289px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    color: var(--pueblo);
+    font-size: 24px;
+    opacity: 1;
+    text-align: left;
+    align-items: center;
+    line-height: 36px;
+    word-spacing: 0.0015em;
+    padding-top: 16px;
+
+    b {
+      background: var(--pink);
+      font-weight: normal;
+      position: relative;
+      left: 7px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    font-size: 16px;
+    opacity: 1;
+    text-align: center;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: var(--cod-gray);
+    padding-left: 25px;
+    padding-right: 23px;
+    padding-top: 11px;
+    height: 24%;
+  }
+}
+
+@media screen and (max-width: ($tablet-viewport)) {
+  .profile {
+    width: 343px;
+    height: 380px;
+    margin-top: 35px;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      justify-content: space-between;
+      background-color: var(--pearl-bush);
+      align-items: center;
+    }
+
+    &__image {
+      width: auto;
+      height: 168px;
+    }
+  }
+}

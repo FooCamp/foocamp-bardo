@@ -1,0 +1,21 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 45px;
+  background: var(--tuscany);
+  color: var(--white);
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  border: 0;
+  margin-top: 5px;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
