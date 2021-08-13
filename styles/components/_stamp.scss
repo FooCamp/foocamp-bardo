@@ -1,17 +1,26 @@
 .stamp {
-  width: 78px;
+  width: 115px;
+  height: 115px;
+
+  &--small {
+    width: 78px;
+    height: 78px;
+  }
 }
 
 @media screen and (min-width: ($tablet-viewport+1)) {
   .stamp {
-    width: 115px;
-
     &--right {
       transform: translateX(50%);
     }
 
     &--left {
       transform: translateX(-50%);
+    }
+
+    &--small {
+      width: 115px;
+      height: 115px;
     }
   }
 }
