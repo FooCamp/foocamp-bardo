@@ -1,8 +1,8 @@
-export default function Subtitle({ children }) {
+export default function Subtitle({ data, className }) {
   return (
-    <h4 className="subtitle">
+    <h4 className={`subtitle ${className}`}>
       {/* eslint-disable-next-line react/no-danger  */}
-      <div dangerouslySetInnerHTML={{ __html: children }} />
+      <div dangerouslySetInnerHTML={{ __html: data }} />
     </h4>
   );
 }
