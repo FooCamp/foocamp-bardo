@@ -1,6 +1,6 @@
 import Navigation from './Navigation';
 import Footer from './Footer';
-import Cards from './Profiles';
+import Profiles from './Profiles';
 
 export default function Layout({ data, children }) {
   return (
@@ -8,7 +8,7 @@ export default function Layout({ data, children }) {
       <Navigation {...children} />
 
       <div className="page-content">
-        <Cards {...children} />
+        <Profiles {...children} />
       </div>
       <Footer data={data} />
     </div>
