@@ -1,0 +1,51 @@
+$pagebtn-size: 48px;
+
+.pagination {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 1fr auto 1fr;
+
+  &__btn {
+    height: 38px;
+    width: $pagebtn-size;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #c4c4c4;
+    background-color: #fff;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+
+    &-active {
+      color: #be482c;
+    }
+  }
+
+  &__list {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: flex;
+    max-width: $pagebtn-size * 3;
+    overflow: hidden;
+  }
+
+  &__item {
+    transition: margin 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__prev {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    justify-self: start;
+    justify-self: end;
+  }
+
+  &__next {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    justify-self: end;
+    justify-self: start;
+  }
+}

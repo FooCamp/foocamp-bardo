@@ -1,6 +1,6 @@
 import Caption from './Caption';
 
-export default function CardArtwork({ artwork }) {
+export default function CardArtwork({ artwork, style }) {
   const {
     author, cardDescription, cardTitle, edition, cardImage, cardComponents,
   } = artwork.fields;
@@ -8,7 +8,7 @@ export default function CardArtwork({ artwork }) {
   const { buttonText } = cardComponents.fields;
   const description = cardDescription.length > 180 ? `${cardDescription.substring(0, 180)}...` : cardDescription;
   return (
-    <div className="card-artwork">
+    <div className="card-artwork" style={style}>
       <div className="card-artwork__header">
         <picture className="card-artwork__picture">
           <img src={url} alt={title} className="card-artwork__image" />

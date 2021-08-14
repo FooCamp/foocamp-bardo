@@ -1,5 +1,4 @@
 .artwork {
-  padding-bottom: 120px;
   background-color: #f0e9e5;
 
   &__header {
@@ -15,6 +14,11 @@
   &__list-content {
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+  }
+
+  &__pagination {
+    padding: 40px 0;
   }
 }
 
