@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getContentfulArtworkData } from '../utils/contentful';
 import Container from './Container';
 import Title from './Title';
 import Subtitle from './Subtitle';
 import CardArtwork from './CardArtwork';
 import Pagination from './Pagination';
+
+function debounce(fn, ms) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      timer = null;
+      fn.apply(this, ...args);
+    }, ms);
+  };
+}
 
 export default function Artwork({ data }) {
   const artworkData = getContentfulArtworkData(data);
@@ -20,27 +31,81 @@ export default function Artwork({ data }) {
   ].reduce(reducer, []);
 
   const [margin, setMargin] = useState('');
-  const [perPage/* , setPerPage */] = useState(3);
+  const [perPage, setPerPage] = useState(4);
   const [counter, setCounter] = useState(1);
+  const [viewport, setViewport] = useState('mobile');
+  const [artPieces, setArtPieces] = useState({ top: [], bottom: [] });
 
-  const changeCarrousel = (newCount) => {
+  const changePage = (newCount) => {
     setCounter(newCount);
-    setMargin(`calc(-${(newCount - 1) * 100}% - ${(newCount - 1) * 25}px)`);
+    if (viewport === 'mobile') {
+      setMargin(`calc(-${(newCount - 1) * 100}% - ${(newCount - 1) * 16}px)`);
+    } else {
+      setMargin(`calc(-${(newCount - 1) * 100}% - ${(newCount - 1) * 24}px)`);
+    }
   };
 
   const onPrevPage = () => {
     const newCount = counter - 1;
-    changeCarrousel(newCount);
+    changePage(newCount);
   };
 
   const onNextPage = () => {
     const newCount = counter + 1;
-    changeCarrousel(newCount);
+    changePage(newCount);
   };
 
   const onPage = (newCount) => {
-    changeCarrousel(newCount);
+    changePage(newCount);
   };
+
+  const setCarrouselMobile = () => {
+    const newArtPieces = { top: [], bottom: [] };
+    for (let index = 1; index <= Math.ceil(artPiecesList.length / 2); index += 1) {
+      const elements = [];
+      elements.push(artPiecesList[index * 2 - 2]);
+      if (artPiecesList.length > (index * 2 - 1)) {
+        elements.push(artPiecesList[index * 2 - 1]);
+      }
+
+      if (index % 2 === 0) {
+        newArtPieces.bottom.push(...elements);
+      } else {
+        newArtPieces.top.push(...elements);
+      }
+    }
+    setArtPieces(newArtPieces);
+  };
+
+  const setCarrouselDesktop = () => {
+    const newArtPieces = { top: [], bottom: [] };
+    newArtPieces.top = artPiecesList.reduce(reducer, []);
+    setArtPieces(newArtPieces);
+  };
+
+  useEffect(() => {
+    const debouncedHandleResize = debounce(() => {
+      const newViewport = window.innerWidth <= 768 ? 'mobile' : 'desktop';
+      setViewport(newViewport);
+    }, 500);
+
+    window.addEventListener('resize', debouncedHandleResize);
+
+    return () => {
+      window.removeEventListener('resize', debouncedHandleResize);
+    };
+  });
+
+  useEffect(() => {
+    if (viewport === 'mobile') {
+      setPerPage(4);
+      setCarrouselMobile();
+    } else {
+      setPerPage(3);
+      setCarrouselDesktop();
+    }
+    changePage(1);
+  }, [viewport]);
 
   return (
     <section className="artwork">
@@ -55,12 +120,22 @@ export default function Artwork({ data }) {
       <div className="artwork__list">
         <Container>
           <div className="artwork__list-content">
-            {artPiecesList.map((artwork, index) => (
+            {artPieces.top.map((artwork) => (
               <CardArtwork
                 artwork={artwork}
                 key={artwork.index}
                 // key={artwork.fields.identifier}
-                style={index === 0 ? { marginLeft: margin } : {}}
+                style={{ left: margin }}
+              />
+            ))}
+          </div>
+          <div className="artwork__list-content">
+            {artPieces.bottom.map((artwork) => (
+              <CardArtwork
+                artwork={artwork}
+                key={artwork.index}
+                // key={artwork.fields.identifier}
+                style={{ left: margin }}
               />
             ))}
           </div>
