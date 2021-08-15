@@ -23,10 +23,10 @@ export default function AliadosCarousel({ data }) {
         className="aliadosCarousel"
       >
         {carouselComponents.map((slide) => (
-          <SwiperSlide>
+          <SwiperSlide key={slide.fields.identifier}>
             <AliadosSlide
-              brandLogos={brandLogos}
               key={slide.fields.identifier}
+              brandLogos={brandLogos}
               slideInfo={slide.fields}
             />
           </SwiperSlide>
