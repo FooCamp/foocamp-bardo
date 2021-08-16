@@ -6,7 +6,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       data: pageData,
-      components: []/* pageData.fields.components */,
+      components: [] /* pageData.fields.components */,
     },
   };
 };
@@ -16,9 +16,7 @@ export default function Recipes({ components, data }) {
 
   return (
     <div className="home">
-      <h1>
-        Index page
-      </h1>
+      <h1>Index page</h1>
       {components.map((component) => (
         <p key={component.sys.id}>{component.fields.title}</p>
       ))}

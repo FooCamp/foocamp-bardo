@@ -1,0 +1,43 @@
+.aliadosBullet {
+  width: 15.85px;
+  height: 16px;
+  background: var(--white);
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 15.85px;
+  border: 1px solid var(--white);
+  margin-top: 32px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px 1px #cdcdcd;
+}
+
+.aliadosBullet-active {
+  background: var(--pueblo);
+}
+
+.aliadosCarousel {
+  display: flex;
+  flex-direction: column;
+
+  .swiper-pagination {
+    order: 2;
+    position: static !important;
+
+    span:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .swiper-wrapper {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: ($mobile-viewport)) {
+  .aliadosBullet {
+    width: 8px;
+    height: 8px;
+    margin-top: 29px;
+  }
+}
