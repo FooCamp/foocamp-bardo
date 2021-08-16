@@ -1,10 +1,6 @@
 {
   "extends": "stylelint-config-standard",
-<<<<<<< HEAD
     "plugins": [
-=======
-  "plugins": [
->>>>>>> 85f082a (Stylelint stuff)
     "stylelint-scss"
   ],
   "rules": {

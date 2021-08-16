@@ -1,46 +1,6 @@
-<<<<<<< HEAD
 // abstracts
-=======
-@import "./base/base";
->>>>>>> 41e4fa1 (Add: Progress on layout, spacing out text)
 @import "./abstracts/variables";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-@import "./components/navigation";
-@import "./components/hero";
-@import "./base/typography";
-@import "./components/title";
-@import "./components/subtitle";
-@import "./components/overline";
-
-body {
-  background-color: var(--coral);
-  margin: 0;
-  font-family: var(--poppins);
-}
-
-.layout {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  text-align: center;
-  margin: 60px 0;
-}
-
-header a {
-  text-decoration: none;
-  color: black;
-  text-transform: uppercase;
-  display: inline-block;
-}
->>>>>>> 54a1349 (Add: Dynamic title component)
-=======
 @import "./abstracts/mixins";
->>>>>>> e1fbded (Add: Font mixin class)
 
 // base
 @import "./base/typography";
@@ -51,7 +11,6 @@ header a {
 @import "./layout/container";
 @import "./layout/footer";
 
-<<<<<<< HEAD
 // components
 @import "./components/navigation";
 @import "./components/stamp";
@@ -59,24 +18,7 @@ header a {
 @import "./components/sitemap";
 @import "./components/title";
 @import "./components/subtitle";
-<<<<<<< HEAD
-<<<<<<< HEAD
 @import "./components/profileCard";
 @import "./components/button";
 @import "./components/profiles";
-<<<<<<< HEAD
-=======
-.page-content {
-  width: 100%;
-  box-sizing: border-box;
-}
->>>>>>> 54a1349 (Add: Dynamic title component)
-=======
-@import "./components/overline";
-=======
->>>>>>> d506930 (Font mixins finished, typographic class finished)
 @import "./components/hero";
->>>>>>> 19ce338 (Missing commit)
-=======
-@import "./components/hero";
->>>>>>> 2f13624 (General adjustments)
