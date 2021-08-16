@@ -26,6 +26,17 @@
 
   &__more {
     text-align: right;
+    display: flex;
+    flex-flow: row-reverse;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
   }
 
   &__picture {
@@ -64,6 +75,11 @@
 
     &__image {
       height: auto;
+    }
+
+    &__btn {
+      position: initial;
+      opacity: 1;
     }
   }
 }

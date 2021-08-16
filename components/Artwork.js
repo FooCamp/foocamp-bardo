@@ -1,21 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { getContentfulArtworkData } from '../utils/contentful';
+import debounce from '../utils/function';
 import Container from './Container';
 import Title from './Title';
 import Subtitle from './Subtitle';
 import CardArtwork from './CardArtwork';
 import Pagination from './Pagination';
-
-function debounce(fn, ms) {
-  let timer;
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      timer = null;
-      fn.apply(this, ...args);
-    }, ms);
-  };
-}
 
 export default function Artwork({ data }) {
   const artworkData = getContentfulArtworkData(data);
@@ -87,14 +77,15 @@ export default function Artwork({ data }) {
     const debouncedHandleResize = debounce(() => {
       const newViewport = window.innerWidth <= 768 ? 'mobile' : 'desktop';
       setViewport(newViewport);
-    }, 500);
+    }, 250);
 
     window.addEventListener('resize', debouncedHandleResize);
+    debouncedHandleResize();
 
     return () => {
       window.removeEventListener('resize', debouncedHandleResize);
     };
-  });
+  }, []);
 
   useEffect(() => {
     if (viewport === 'mobile') {

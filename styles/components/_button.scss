@@ -1,0 +1,40 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  text-transform: uppercase;
+  background: var(--tuscany);
+  color: var(--white);
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  border: 0;
+  margin-top: 5px;
+  transition: border 0.5s, color 0.5s;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover {
+    background: var(--white);
+    border: 1px solid var(--tuscany);
+    box-sizing: border-box;
+    color: var(--tuscany);
+  }
+
+  &--secondary {
+    border: 1px solid var(--tuscany);
+    background: var(--white);
+    color: var(--tuscany);
+
+    &:hover {
+      border: 1px solid var(--pueblo);
+      color: var(--pueblo);
+    }
+  }
+}

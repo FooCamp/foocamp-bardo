@@ -1,4 +1,5 @@
 import Caption from './Caption';
+import Button from './Button';
 
 export default function CardArtwork({ artwork, style }) {
   const {
@@ -24,8 +25,11 @@ export default function CardArtwork({ artwork, style }) {
           <Caption>{ edition }</Caption>
         </div>
         <div className="card-artwork__more">
-          {/* Aqui va el boton  */}
-          { buttonText }
+          <Button
+            buttonstyle="button button--secondary card-artwork__btn"
+          >
+            { buttonText }
+          </Button>
         </div>
       </div>
     </div>

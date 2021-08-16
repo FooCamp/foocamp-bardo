@@ -20,3 +20,8 @@ export function getContentfulFooterData(data) {
   const footerData = data.items[0].fields.components[5].fields;
   return footerData;
 }
+
+export function getContentfulProfiles(data) {
+  const profiles = data.data.items[0].fields.components[2].fields;
+  return profiles;
+}
