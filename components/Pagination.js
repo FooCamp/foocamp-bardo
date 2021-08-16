@@ -53,7 +53,7 @@ export default function Pagination({
 
   const getMargin = () => {
     let newMargin = 0;
-    if (currentPage >= countToShow - 1 && totalPages - currentPage >= 1) {
+    if (currentPage > 1 && totalPages - 1 >= currentPage) {
       newMargin = (currentPage - (countToShow - 1)) * btnWidth;
       setMargin(-newMargin);
     }

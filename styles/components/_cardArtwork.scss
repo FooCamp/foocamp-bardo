@@ -64,6 +64,8 @@
     min-width: calc(33.3% - #{$desktop-margin * 0.5 + 3});
     margin-right: $desktop-margin;
     margin-bottom: 0;
+    cursor: grab;
+    user-select: none;
 
     &__details {
       margin: 25px 0;
