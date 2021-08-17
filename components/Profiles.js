@@ -5,7 +5,7 @@ import Subtitle from './Subtitle';
 import Container from './Container';
 import Stamp from './Stamp';
 
-export default function Profiles({ props }) {
+export default function Profiles(props) {
   const dataContentful = getContentfulProfiles(props);
   const { sectionComponents, sectionTitle, sectionDescription } = dataContentful;
 

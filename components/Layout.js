@@ -1,6 +1,5 @@
 import Navigation from './Navigation';
 import Footer from './Footer';
-import Cards from './Profiles';
 import AliadosSection from './AliadosSection';
 
 export default function Layout({ data, children }) {
@@ -9,7 +8,7 @@ export default function Layout({ data, children }) {
       <Navigation {...children} />
 
       <div className="page-content">
-        <Cards {...children} />
+        {children}
         <AliadosSection {...children} />
       </div>
 
