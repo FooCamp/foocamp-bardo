@@ -12,7 +12,7 @@ export default function CardArtwork({ artwork, style, aditionalProps }) {
     <div className="card-artwork" style={style} {...aditionalProps}>
       <div className="card-artwork__header">
         <picture className="card-artwork__picture">
-          <img src={url} alt={title} className="card-artwork__image" />
+          <img src={url} alt={title} className="card-artwork__image" draggable="false" />
         </picture>
         <div className="card-artwork__details">
           <div className="card-artwork__title">{cardTitle}</div>

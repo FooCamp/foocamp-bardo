@@ -2,20 +2,14 @@ import { getContentfulArtworkData } from '../utils/contentful';
 import Container from './Container';
 import Title from './Title';
 import Subtitle from './Subtitle';
-import ArtworkCarrousel from './ArtworkCarrousel';
+import ArtworkCarousel from './ArtworkCarousel';
 
 export default function Artwork({ data }) {
   const artworkData = getContentfulArtworkData(data);
   const {
     sectionTitle, sectionDescription, sectionComponents,
   } = artworkData;
-  // const { artPiecesList } = sectionComponents[0].fields;
-  const reducer = (prev, current, index) => prev.concat({ ...current, index });
-  const artPiecesList = [
-    ...sectionComponents[0].fields.artPiecesList,
-    ...sectionComponents[0].fields.artPiecesList,
-    ...sectionComponents[0].fields.artPiecesList,
-  ].reduce(reducer, []);
+  const { artPiecesList } = sectionComponents[0].fields;
 
   return (
     <section className="artwork">
@@ -27,7 +21,7 @@ export default function Artwork({ data }) {
           <Subtitle>{ sectionDescription }</Subtitle>
         </div>
       </Container>
-      <ArtworkCarrousel artPiecesList={artPiecesList} />
+      <ArtworkCarousel artPiecesList={artPiecesList} />
     </section>
   );
 }

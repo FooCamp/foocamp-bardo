@@ -6,21 +6,22 @@ $pagebtn-size: 48px;
   grid-template-columns: 1fr auto 1fr;
 
   &__btn {
-    height: 38px;
-    width: $pagebtn-size;
-    line-height: 38px;
     text-align: center;
     cursor: pointer;
-    border: 1px solid #c4c4c4;
-    background-color: #fff;
-
-    &:hover {
-      background-color: #e0e0e0;
-    }
+    min-width: 103px;
+    margin: 0;
 
     &-active {
-      color: #be482c;
+      color: var(--tuscany);
     }
+  }
+
+  &--desktop {
+    display: none;
+  }
+
+  &--mobile {
+    display: block;
   }
 
   &__list {
@@ -28,7 +29,16 @@ $pagebtn-size: 48px;
     grid-column: 2/3;
     display: flex;
     max-width: $pagebtn-size * 3;
-    overflow: hidden;
+
+    &--desktop {
+      display: none;
+    }
+
+    &--mobile {
+      margin: 0;
+      padding: 0 1.5rem;
+      align-items: center;
+    }
   }
 
   &__item {
@@ -39,13 +49,52 @@ $pagebtn-size: 48px;
     grid-row: 2/3;
     grid-column: 1/2;
     justify-self: start;
-    justify-self: end;
   }
 
   &__next {
     grid-row: 2/3;
     grid-column: 3/4;
     justify-self: end;
-    justify-self: start;
+  }
+}
+
+@media screen and (min-width: ($tablet-viewport+1)) {
+  .pagination {
+    &__list {
+      overflow: hidden;
+
+      &--desktop {
+        display: flex;
+      }
+
+      &--mobile {
+        display: none;
+      }
+    }
+
+    &__prev {
+      justify-self: end;
+    }
+
+    &__next {
+      justify-self: start;
+    }
+
+    &__btn {
+      height: 38px;
+      width: $pagebtn-size;
+      min-width: $pagebtn-size;
+      line-height: 38px;
+      border: 1px solid var(--gray);
+      background-color: var(--white);
+    }
+
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
+    }
   }
 }

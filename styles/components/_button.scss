@@ -31,10 +31,27 @@
     border: 1px solid var(--tuscany);
     background: var(--white);
     color: var(--tuscany);
+    font-weight: 500;
 
     &:hover {
       border: 1px solid var(--pueblo);
       color: var(--pueblo);
+    }
+
+    &--disabled {
+      background-color: var(--light-gray);
+      border: 1px solid var(--semi-gray);
+      color: var(--semi-gray);
+    }
+  }
+
+  &--bordered {
+    border: 1px solid var(--gray);
+    background-color: var(--white);
+    color: var(--cod-gray);
+
+    &:hover {
+      background-color: var(--light-gray);
     }
   }
 }

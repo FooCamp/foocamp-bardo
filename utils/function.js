@@ -9,4 +9,18 @@ function debounce(fn, ms) {
   };
 }
 
-export { debounce as default };
+const range = (from, to) => {
+  let i = from;
+  const listRange = [];
+
+  while (i <= to) {
+    listRange.push({
+      value: i,
+      index: `page_${i}`,
+    });
+    i += 1;
+  }
+  return listRange;
+};
+
+export { debounce, range };
