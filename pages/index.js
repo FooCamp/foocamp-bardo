@@ -7,7 +7,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       data: pageData,
-      components: []/* pageData.fields.components */,
+      components: [] /* pageData.fields.components */,
     },
   };
 };
