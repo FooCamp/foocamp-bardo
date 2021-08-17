@@ -1,5 +1,6 @@
 import getPageData from '../utils/api';
 import Artwork from '../components/Artwork';
+import HomeHero from '../components/Hero/HomeHero';
 
 export const getServerSideProps = async () => {
   const pageData = await getPageData('home');
@@ -7,7 +8,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       data: pageData,
-      components: []/* pageData.fields.components */,
+      components: [] /* pageData.fields.components */,
     },
   };
 };
@@ -15,9 +16,7 @@ export const getServerSideProps = async () => {
 export default function Recipes({ data }) {
   return (
     <div className="home">
-      <h1>
-        Index page
-      </h1>
+      <HomeHero data={data} />
       <Artwork data={data} />
     </div>
   );

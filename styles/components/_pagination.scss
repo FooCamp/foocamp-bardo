@@ -87,6 +87,11 @@ $pagebtn-size: 48px;
       line-height: 38px;
       border: 1px solid var(--gray);
       background-color: var(--white);
+
+      &:hover {
+        border: 1px solid var(--gray);
+        color: var(--cod-gray);
+      }
     }
 
     &--desktop {

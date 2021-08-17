@@ -54,7 +54,7 @@ export default function Pagination({
       <div className="pagination__prev">
         { !(currentPage === 1)
           && (
-            <Button buttonstyle={btnClass} onclick={onPrevPage} aria-label="Atrás">
+            <Button buttonstyle={btnClass} onclick={onPrevPage} ariaLabel="Atrás">
               <span className="pagination--desktop">&lt;</span>
               <span className="pagination--mobile">Atrás</span>
             </Button>
@@ -70,7 +70,7 @@ export default function Pagination({
                 style={index === 0 ? { marginLeft: margin } : {}}
               >
                 <Button
-                  buttonstyle={`pagination__btn${currentPage === page.value ? ' pagination__btn-active' : ''}`}
+                  buttonstyle={`button button--bordered pagination__btn${currentPage === page.value ? ' pagination__btn-active' : ''}`}
                   onclick={() => onPage(page.value)}
                 >
                   { page.value }
@@ -88,7 +88,7 @@ export default function Pagination({
       <div className="pagination__next">
         { !(currentPage === totalPages)
           && (
-            <Button buttonstyle={btnClass} onclick={onNextPage} aria-label="Siguiente">
+            <Button buttonstyle={btnClass} onclick={onNextPage} ariaLabel="Siguiente">
               <span className="pagination--desktop">&gt;</span>
               <span className="pagination--mobile">SIguiente</span>
             </Button>

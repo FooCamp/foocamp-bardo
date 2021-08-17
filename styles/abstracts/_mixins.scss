@@ -1,0 +1,103 @@
+// Style guide font mixins
+@mixin font-h1 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 6rem;
+  line-height: 9rem;
+  letter-spacing: -0.015em;
+}
+
+@mixin font-h2 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3.75rem;
+  line-height: 5.625rem;
+  letter-spacing: -0.005em;
+}
+
+@mixin font-h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  letter-spacing: 0.0025em;
+}
+
+@mixin font-h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.125rem;
+  line-height: 3.1875rem;
+  letter-spacing: 0.0025em;
+}
+
+@mixin font-h5 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 36px;
+}
+
+@mixin font-h6 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.0015em;
+}
+
+@mixin font-subtitle1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.001em;
+}
+
+@mixin font-subtitle2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  letter-spacing: 0.001em;
+}
+
+@mixin font-body1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.005em;
+}
+
+@mixin font-body2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  letter-spacing: 0.0025em;
+}
+
+@mixin font-button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  letter-spacing: 0.0125em;
+  text-transform: uppercase;
+}
+
+@mixin font-caption {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+@mixin font-overline {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.625rem;
+  line-height: 0.9375rem;
+  letter-spacing: 0.15em;
+}

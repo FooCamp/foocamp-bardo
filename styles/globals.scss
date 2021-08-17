@@ -1,5 +1,6 @@
 // abstracts
 @import "./abstracts/variables";
+@import "./abstracts/mixins";
 
 // base
 @import "./base/typography";
@@ -24,3 +25,8 @@
 @import "./components/pagination";
 @import "./components/profileCard";
 @import "./components/profiles";
+@import "./components/hero";
+@import "./components/aliadosSection";
+@import "./components/aliadosSlide";
+@import "./components/aliadosCarousel";
+@import "swiper/components/pagination/pagination.scss";
