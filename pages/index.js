@@ -1,5 +1,6 @@
 import getPageData from '../utils/api';
 import Profiles from '../components/Profiles';
+import HomeHero from '../components/Hero/HomeHero';
 
 export const getServerSideProps = async () => {
   const pageData = await getPageData('home');
@@ -17,6 +18,7 @@ export default function Recipes({ data }) {
 
   return (
     <div className="home">
+      <HomeHero data={data} />
       <Profiles data={data} />
     </div>
   );
