@@ -15,10 +15,10 @@ export default function Profiles({ props }) {
       <Container className="profiles__header">
         <div className="profiles__title">
           <Stamp position="right" />
-          <Title>{sectionTitle}</Title>
+          <Title data={sectionTitle} />
         </div>
         <div className="profiles__subtitle">
-          <Subtitle>{sectionDescription}</Subtitle>
+          <Subtitle data={sectionDescription} />
         </div>
       </Container>
 
