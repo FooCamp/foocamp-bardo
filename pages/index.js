@@ -2,6 +2,7 @@ import getPageData from '../utils/api';
 import Artwork from '../components/Artwork';
 import HomeHero from '../components/Hero/HomeHero';
 import Profiles from '../components/Profiles';
+import Aliados from '../components/AliadosSection';
 
 export const getServerSideProps = async () => {
   const pageData = await getPageData('home');
@@ -15,13 +16,12 @@ export const getServerSideProps = async () => {
 };
 
 export default function Recipes({ data }) {
-  console.log(data);
-
   return (
     <div className="home">
       <HomeHero data={data} />
       <Profiles data={data} />
       <Artwork data={data} />
+      <Aliados data={data} />
     </div>
   );
 }

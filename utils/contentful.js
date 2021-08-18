@@ -17,7 +17,8 @@ export function getContentfulArtworkData(data) {
 }
 
 export function getContentfulFooterData(data) {
-  const footerData = data.items[0].fields.components[5].fields;
+  const positionFooter = data.items[0].fields.components.length - 1;
+  const footerData = data.items[0].fields.components[positionFooter].fields;
   return footerData;
 }
 
@@ -27,7 +28,7 @@ export function getContentfulProfiles(data) {
 }
 
 export function getContentfulAliados(data) {
-  const sectionAliados = data.data.items[0].fields.components[4].fields;
+  const sectionAliados = data.items[0].fields.components[4].fields;
   dataContentful.aliadosDescription = sectionAliados.sectionDescription;
   dataContentful.aliadosTitle = sectionAliados.sectionTitle;
   dataContentful.aliadosComponents = sectionAliados.sectionComponents;
