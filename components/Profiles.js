@@ -5,7 +5,7 @@ import Subtitle from './Subtitle';
 import Container from './Container';
 import Stamp from './Stamp';
 
-export default function Profiles({ props }) {
+export default function Profiles(props) {
   const dataContentful = getContentfulProfiles(props);
   const { sectionComponents, sectionTitle, sectionDescription } = dataContentful;
 
@@ -15,10 +15,10 @@ export default function Profiles({ props }) {
       <Container className="profiles__header">
         <div className="profiles__title">
           <Stamp position="right" />
-          <Title>{sectionTitle}</Title>
+          <Title data={sectionTitle} />
         </div>
         <div className="profiles__subtitle">
-          <Subtitle>{sectionDescription}</Subtitle>
+          <Subtitle data={sectionDescription} />
         </div>
       </Container>
 
@@ -28,8 +28,9 @@ export default function Profiles({ props }) {
             key={component.fields.identifier}
             description={component.fields.cardDescription}
             image={component.fields.cardImage.fields.file.url}
-            link={component.fields.cardLink}
+            link={component.fields.cardComponents.fields.buttonLink}
             title={component.fields.cardTitle}
+            buttontext={component.fields.cardComponents.fields.buttonText}
           />
         ))}
       </div>
