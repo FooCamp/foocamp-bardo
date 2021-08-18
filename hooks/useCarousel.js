@@ -10,6 +10,7 @@ export default function useCarousel(ref, totalList) {
   const [currentPage, setCurrentPage] = useState(1);
 
   const [left, setLeft] = useState('');
+  // const [top, setLeft] = useState('');
   const [cursor, setCursor] = useState('grab');
   const [carousel, setCarousel] = useState({});
 

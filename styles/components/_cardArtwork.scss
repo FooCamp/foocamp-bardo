@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  margin-bottom: 44px;
+  margin-bottom: 36px;
 
   &__header {
     display: flex;
@@ -41,13 +41,13 @@
 
   &__picture {
     overflow: hidden;
-    height: 160px;
     display: flex;
     align-items: center;
   }
 
   &__image {
-    height: auto;
+    height: 160px;
+    object-fit: cover;
   }
 
   &__title {
@@ -71,12 +71,8 @@
       margin: 25px 0;
     }
 
-    &__picture {
-      height: 300px;
-    }
-
     &__image {
-      height: auto;
+      height: 300px;
     }
 
     &__btn {
