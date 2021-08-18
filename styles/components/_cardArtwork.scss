@@ -62,8 +62,8 @@
 
 @media screen and (min-width: ($tablet-viewport+1)) {
   .card-artwork {
-    width: calc(33.3% - #{$desktop-margin * 0.5 + 3});
-    min-width: calc(33.3% - #{$desktop-margin * 0.5 + 3});
+    width: calc(33.3% - #{$desktop-margin * 0.66});
+    min-width: calc(33.3% - #{$desktop-margin * 0.66});
     margin-right: $desktop-margin;
     margin-bottom: 0;
     cursor: grab;
