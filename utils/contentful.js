@@ -11,6 +11,11 @@ export function getContentfulHeroData(data) {
   return dataContentful;
 }
 
+export function getContentfulArtworkData(data) {
+  const artworkData = data.items[0].fields.components[3].fields;
+  return artworkData;
+}
+
 export function getContentfulFooterData(data) {
   const footerData = data.items[0].fields.components[5].fields;
   return footerData;

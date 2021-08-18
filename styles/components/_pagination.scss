@@ -1,0 +1,105 @@
+$pagebtn-size: 48px;
+
+.pagination {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 1fr auto 1fr;
+
+  &__btn {
+    text-align: center;
+    cursor: pointer;
+    min-width: 103px;
+    margin: 0;
+
+    &-active {
+      color: var(--tuscany);
+    }
+  }
+
+  &--desktop {
+    display: none;
+  }
+
+  &--mobile {
+    display: block;
+  }
+
+  &__list {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    display: flex;
+    max-width: $pagebtn-size * 3;
+
+    &--desktop {
+      display: none;
+    }
+
+    &--mobile {
+      margin: 0;
+      padding: 0 1.5rem;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    transition: margin 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__prev {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    justify-self: start;
+  }
+
+  &__next {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    justify-self: end;
+  }
+}
+
+@media screen and (min-width: ($tablet-viewport+1)) {
+  .pagination {
+    &__list {
+      overflow: hidden;
+
+      &--desktop {
+        display: flex;
+      }
+
+      &--mobile {
+        display: none;
+      }
+    }
+
+    &__prev {
+      justify-self: end;
+    }
+
+    &__next {
+      justify-self: start;
+    }
+
+    &__btn {
+      height: 38px;
+      width: $pagebtn-size;
+      min-width: $pagebtn-size;
+      line-height: 38px;
+      border: 1px solid var(--gray);
+      background-color: var(--white);
+
+      &:hover {
+        border: 1px solid var(--gray);
+        color: var(--cod-gray);
+      }
+    }
+
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+}

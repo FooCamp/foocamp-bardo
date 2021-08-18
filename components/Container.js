@@ -1,6 +1,7 @@
-export default function Container({ children }) {
+export default function Container({ children, className }) {
+  const containerClass = className ? `container ${className}` : 'container';
   return (
-    <div className="container">
+    <div className={containerClass}>
       {children}
     </div>
   );

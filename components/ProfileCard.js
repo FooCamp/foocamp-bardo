@@ -17,7 +17,7 @@ export default function Card({
       <ProfileTitle text={title} />
       <div className="profile__description">{description}</div>
       <Button
-        buttonstyle="button"
+        buttonstyle="button button--primary"
         onclick={() => openInNewTab(link)}
         text={buttontext}
       />

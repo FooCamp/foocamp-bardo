@@ -1,3 +1,4 @@
 export default function Title({ data, className }) {
-  return <h3 className={`title ${className}`}>{data}</h3>;
+  const titleClass = className ? `title ${className}` : 'title';
+  return <h3 className={titleClass}>{data}</h3>;
 }

@@ -1,0 +1,85 @@
+.card-artwork {
+  width: calc(50% - #{$mobile-margin * 0.5});
+  min-width: calc(50% - #{$mobile-margin * 0.5});
+  margin-right: $mobile-margin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition:
+    left 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    margin 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  margin-bottom: 36px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__details {
+    margin: 8px 0;
+  }
+
+  &__date {
+    border-top: 1px solid var(--line-gray);
+    color: var(--light-black);
+  }
+
+  &__more {
+    text-align: right;
+    display: flex;
+    flex-flow: row-reverse;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+
+  &__picture {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    height: 160px;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: var(--cod-gray);
+  }
+}
+
+@media screen and (min-width: ($tablet-viewport+1)) {
+  .card-artwork {
+    width: calc(33.3% - #{$desktop-margin * 0.66});
+    min-width: calc(33.3% - #{$desktop-margin * 0.66});
+    margin-right: $desktop-margin;
+    margin-bottom: 0;
+    cursor: grab;
+    user-select: none;
+
+    &__details {
+      margin: 25px 0;
+    }
+
+    &__image {
+      height: 300px;
+    }
+
+    &__btn {
+      position: initial;
+      opacity: 1;
+    }
+  }
+}
