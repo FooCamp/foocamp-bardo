@@ -28,8 +28,9 @@ export default function Profiles(props) {
             key={component.fields.identifier}
             description={component.fields.cardDescription}
             image={component.fields.cardImage.fields.file.url}
-            link={component.fields.cardLink}
+            link={component.fields.cardComponents.fields.buttonLink}
             title={component.fields.cardTitle}
+            buttontext={component.fields.cardComponents.fields.buttonText}
           />
         ))}
       </div>

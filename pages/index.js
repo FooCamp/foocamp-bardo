@@ -1,6 +1,6 @@
 import getPageData from '../utils/api';
-import Profiles from '../components/Profiles';
 import HomeHero from '../components/Hero/HomeHero';
+import Profiles from '../components/Profiles';
 
 export const getServerSideProps = async () => {
   const pageData = await getPageData('home');
