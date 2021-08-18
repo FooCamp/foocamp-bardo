@@ -10,6 +10,7 @@
   cursor: pointer;
   margin-top: 5px;
   letter-spacing: 0.0125em;
+  transition: border 0.5s, color 0.5s, background-color 0.5s;
 
   &:disabled {
     box-sizing: border-box;
