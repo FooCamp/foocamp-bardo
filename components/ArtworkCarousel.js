@@ -12,6 +12,7 @@ export default function ArtworkCarousel({ artPiecesList }) {
   const { viewport } = useViewport();
   const {
     left,
+    top,
     cursor,
     totalPages,
     currentPage,
@@ -100,7 +101,7 @@ export default function ArtworkCarousel({ artPiecesList }) {
               <CardArtwork
                 artwork={artwork}
                 key={artwork.index}
-                style={{ left }}
+                style={{ left, marginTop: top }}
               />
             ))}
           </div>

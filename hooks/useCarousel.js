@@ -10,7 +10,7 @@ export default function useCarousel(ref, totalList) {
   const [currentPage, setCurrentPage] = useState(1);
 
   const [left, setLeft] = useState('');
-  // const [top, setLeft] = useState('');
+  const [top, setTop] = useState(0);
   const [cursor, setCursor] = useState('grab');
   const [carousel, setCarousel] = useState({});
 
@@ -109,6 +109,7 @@ export default function useCarousel(ref, totalList) {
       setPerPage(4);
     } else {
       setPerPage(3);
+      setTop(0);
     }
   }, [viewport]);
 
@@ -123,12 +124,22 @@ export default function useCarousel(ref, totalList) {
     let newLeft = '';
     const padding = viewport === 'mobile' ? 16 : 24;
     newLeft = `calc(-${(currentPage - 1) * 100}% - ${(currentPage - 1) * padding}px)`;
-
     setLeft(newLeft);
+
+    if (carousel.length > 1) {
+      if (currentPage === totalPages
+          && carousel[1].children.length % 2 === 0
+          && carousel[0].children.length > carousel[1].children.length) {
+        setTop(-carousel[0].clientHeight);
+      } else {
+        setTop(0);
+      }
+    }
   }, [currentPage, isDown]);
 
   return {
     left,
+    top,
     cursor,
     perPage,
     totalPages,
