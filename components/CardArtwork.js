@@ -27,9 +27,8 @@ export default function CardArtwork({ artwork, style, aditionalProps }) {
         <div className="card-artwork__more">
           <Button
             buttonstyle="button button--secondary card-artwork__btn"
-          >
-            { buttonText }
-          </Button>
+            text={buttonText}
+          />
         </div>
       </div>
     </div>

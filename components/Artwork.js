@@ -9,12 +9,7 @@ export default function Artwork({ data }) {
   const {
     sectionTitle, sectionDescription, sectionComponents,
   } = artworkData;
-  // const { artPiecesList } = sectionComponents[0].fields;
-  const reducer = (prev, current, index) => prev.concat({ ...current, index });
-  const artPiecesList = [
-    ...sectionComponents[0].fields.artPiecesList,
-    ...sectionComponents[0].fields.artPiecesList,
-  ].reduce(reducer, []);
+  const { artPiecesList } = sectionComponents[0].fields;
 
   return (
     <section className="artwork">

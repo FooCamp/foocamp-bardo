@@ -2,7 +2,7 @@ import Button from './Button';
 import ProfileTitle from './ProfileTitle';
 
 export default function Card({
-  title, description, link, image,
+  title, description, link, image, buttontext,
 }) {
   const openInNewTab = (url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
@@ -16,9 +16,11 @@ export default function Card({
       </div>
       <ProfileTitle text={title} />
       <div className="profile__description">{description}</div>
-      <Button link={link} buttonstyle="button" onclick={openInNewTab}>
-        MÁS INFORMACIÓN
-      </Button>
+      <Button
+        buttonstyle="button button--primary"
+        onclick={() => openInNewTab(link)}
+        text={buttontext}
+      />
     </div>
   );
 }

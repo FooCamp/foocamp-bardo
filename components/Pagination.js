@@ -54,10 +54,17 @@ export default function Pagination({
       <div className="pagination__prev">
         { !(currentPage === 1)
           && (
-            <Button buttonstyle={btnClass} onclick={onPrevPage} ariaLabel="Atrás">
-              <span className="pagination--desktop">&lt;</span>
-              <span className="pagination--mobile">Atrás</span>
-            </Button>
+            <Button
+              buttonstyle={btnClass}
+              onclick={onPrevPage}
+              ariaLabel="Atrás"
+              text={(
+                <>
+                  <span className="pagination--desktop">&lt;</span>
+                  <span className="pagination--mobile">Atrás</span>
+                </>
+              )}
+            />
           )}
       </div>
       { pages.length > 1 && (
@@ -72,9 +79,8 @@ export default function Pagination({
                 <Button
                   buttonstyle={`button button--bordered pagination__btn${currentPage === page.value ? ' pagination__btn-active' : ''}`}
                   onclick={() => onPage(page.value)}
-                >
-                  { page.value }
-                </Button>
+                  text={page.value}
+                />
               </li>
             )) }
           </ul>
@@ -88,10 +94,17 @@ export default function Pagination({
       <div className="pagination__next">
         { !(currentPage === totalPages)
           && (
-            <Button buttonstyle={btnClass} onclick={onNextPage} ariaLabel="Siguiente">
-              <span className="pagination--desktop">&gt;</span>
-              <span className="pagination--mobile">SIguiente</span>
-            </Button>
+            <Button
+              buttonstyle={btnClass}
+              onclick={onNextPage}
+              ariaLabel="Siguiente"
+              text={(
+                <>
+                  <span className="pagination--desktop">&gt;</span>
+                  <span className="pagination--mobile">SIguiente</span>
+                </>
+              )}
+            />
           )}
       </div>
     </div>

@@ -1,5 +1,5 @@
 export default function Button({
-  children, buttonstyle, onclick, ariaLabel,
+  text, buttonstyle, onclick, ariaLabel,
 }) {
   return (
     <div className="button__container">
@@ -9,7 +9,7 @@ export default function Button({
         onClick={onclick}
         aria-label={ariaLabel}
       >
-        {children}
+        {text}
       </button>
     </div>
   );
