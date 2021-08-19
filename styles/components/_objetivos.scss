@@ -13,8 +13,8 @@
   margin-top: 96px;
 }
 
-@media screen and (max-width: ($mobile-viewport)) {
+@media screen and (max-width: ($tablet-viewport)) {
   .objetivos__container {
-    padding-top: 25px;
+    margin-top: 25px;
   }
 }
