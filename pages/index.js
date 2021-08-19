@@ -15,7 +15,7 @@ export const getServerSideProps = async () => {
   };
 };
 
-export default function Recipes({ data }) {
+export default function Home({ data }) {
   return (
     <div className="home">
       <HomeHero data={data} />
