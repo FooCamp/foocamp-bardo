@@ -48,20 +48,19 @@
   grid-row: 2/3;
   background-color: var(--orange);
   display: grid;
-  grid-template-columns: repeat(11, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
   padding: 14px 0;
-}
 
-.brand--0 {
-  grid-column: 1/4;
-  padding: 0 45px;
-  border-right: 1px solid var(--white);
-}
+  :last-child {
+    border-right: none;
+  }
 
-.brand--1 {
-  padding: 0 45px;
-  grid-column: 4/7;
+  &--item {
+    border-right: 1px solid var(--white);
+    height: 76px;
+    margin: 0 14px;
+  }
 }
 
 @media screen and (max-width: ($tablet-viewport)) {
@@ -96,19 +95,13 @@
   }
 
   .aliadosSlide__brands {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    padding: 14px 0;
-  }
+    grid-gap: 0;
+    padding: 14px 85px;
 
-  .brand--0 {
-    grid-column: 1;
-    align-self: center;
-  }
-
-  .brand--1 {
-    padding: 0 45px;
-    grid-column: 2;
-    align-self: center;
+    &--item {
+      height: 38px;
+    }
   }
 }

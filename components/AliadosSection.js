@@ -4,8 +4,8 @@ import Container from './Container';
 import AliadosCarousel from './AliadosCarousel';
 import { getContentfulAliados } from '../utils/contentful';
 
-export default function Aliados({ props }) {
-  const dataContentful = getContentfulAliados(props);
+export default function Aliados({ data }) {
+  const dataContentful = getContentfulAliados(data);
   const { aliadosDescription, aliadosTitle, aliadosComponents } = dataContentful;
   return (
     <section className="aliadosSection">

@@ -19,10 +19,10 @@ export default function AliadosSlide({ brandLogos, slideInfo }) {
         />
       </section>
       <section className="aliadosSlide__brands">
-        {brandLogos.map((logo, index) => (
+        {brandLogos.map((logo) => (
           <img
             key={logo.fields.file.fileName}
-            className={`brand--${index}`}
+            className="aliadosSlide__brands--item"
             alt={logo.fields.file.title}
             src={logo.fields.file.url}
           />
