@@ -1,20 +1,20 @@
-.objetivos {
+.objectives {
   background-color: var(--pearl-bush);
 }
 
-.objetivos__title {
+.objectives__title {
   padding-top: 60px;
   text-align: center;
 }
 
-.objetivos__container {
+.objectives__container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 96px;
 }
 
 @media screen and (max-width: ($tablet-viewport)) {
-  .objetivos__container {
+  .objectives__container {
     margin-top: 25px;
   }
 }

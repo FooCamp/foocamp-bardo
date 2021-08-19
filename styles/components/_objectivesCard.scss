@@ -1,4 +1,4 @@
-.objetivosCard {
+.objectivesCard {
   width: 50%;
   display: flex;
   flex-direction: row;
@@ -6,7 +6,7 @@
   margin-bottom: 92px;
 }
 
-.objetivosCard__text {
+.objectivesCard__text {
   font-style: normal;
   font-weight: 400;
   width: 50%;
@@ -24,7 +24,7 @@
   }
 }
 
-.objetivosCard__image {
+.objectivesCard__image {
   width: 50%;
   margin-left: 25px;
   height: 100%;
@@ -33,29 +33,29 @@
 }
 
 @media screen and (max-width: ($tablet-viewport)) {
-  .objetivosCard {
+  .objectivesCard {
     width: 100%;
     flex-direction: row;
   }
 }
 
 @media screen and (max-width: ($mobile-viewport)) {
-  .objetivosCard {
+  .objectivesCard {
     width: 100%;
     flex-direction: column;
     margin-bottom: 30px;
   }
 
-  .objetivosCard__image,
-  .objetivosCard__text {
+  .objectivesCard__image,
+  .objectivesCard__text {
     width: 100%;
   }
 
-  .objetivosCard__text {
+  .objectivesCard__text {
     padding: 0;
   }
 
-  .objetivosCard__image {
+  .objectivesCard__image {
     height: 170px;
     object-fit: cover;
     margin: 15px 0;

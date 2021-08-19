@@ -1,14 +1,14 @@
-export default function ObjetivosCard({ image, text }) {
+export default function ObjectivesCard({ image, text }) {
   return (
     <>
-      <section className="objetivosCard">
+      <section className="objectivesCard">
         <img
           name="decorative"
-          className="objetivosCard__image"
+          className="objectivesCard__image"
           src={image.file.url}
           alt={image.file.title}
         />
-        <h6 className="objetivosCard__text">
+        <h6 className="objectivesCard__text">
           {/* eslint-disable-next-line react/no-danger  */}
           <div dangerouslySetInnerHTML={{ __html: text }} />
         </h6>

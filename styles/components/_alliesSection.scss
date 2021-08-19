@@ -1,8 +1,8 @@
-.aliadosSection {
+.alliesSection {
   background-color: var(--pearl-bush);
 }
 
-.aliadosSection__header {
+.alliesSection__header {
   display: grid;
   padding: 53px 0 29px;
   grid-template-columns: repeat(12, 1fr);
@@ -10,16 +10,16 @@
   align-items: center;
 }
 
-.aliadosSection__title {
+.alliesSection__title {
   grid-column: 2/4;
 }
 
-.aliadosSection__subtitle {
+.alliesSection__subtitle {
   grid-column: 7/12;
   color: var(--pueblo);
 }
 
-.aliadosSection__carousel {
+.alliesSection__carousel {
   width: 100%;
   margin: 81px 0 48px 0;
   grid-column: 2/12;
@@ -27,23 +27,23 @@
 }
 
 @media screen and (max-width: ($tablet-viewport)) {
-  .aliadosSection__header {
+  .alliesSection__header {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr auto;
   }
 
-  .aliadosSection__title {
+  .alliesSection__title {
     grid-column: 1/4;
     grid-row: 1/2;
   }
 
-  .aliadosSection__subtitle {
+  .alliesSection__subtitle {
     grid-column: 1/12;
     margin-top: 37px;
     grid-row: 2/3;
   }
 
-  .aliadosSection__carousel {
+  .alliesSection__carousel {
     grid-column: 1/12;
     grid-row: 3;
     margin: 18px 0 54px 0;
