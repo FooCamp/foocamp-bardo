@@ -12,7 +12,7 @@
   width: 50%;
   font-size: 1rem;
   margin: 0;
-  padding-left: 25px;
+  margin-left: 25px;
   line-height: 24px;
   letter-spacing: 0.0015em;
 
@@ -27,15 +27,26 @@
 .objectivesCard__image {
   width: 50%;
   margin-left: 25px;
-  height: 100%;
+  height: min-content;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 
 @media screen and (max-width: ($tablet-viewport)) {
   .objectivesCard {
+    flex-direction: column;
+    width: 45%;
+    margin-bottom: 72px;
+  }
+
+  .objectivesCard__image,
+  .objectivesCard__text {
     width: 100%;
-    flex-direction: row;
+    margin-left: 0;
+  }
+
+  .objectivesCard__image {
+    margin-bottom: 15px;
   }
 }
 
@@ -52,7 +63,7 @@
   }
 
   .objectivesCard__text {
-    padding: 0;
+    margin: 0;
   }
 
   .objectivesCard__image {
