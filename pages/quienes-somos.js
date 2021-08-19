@@ -12,7 +12,7 @@ export const getServerSideProps = async () => {
   };
 };
 
-export default function Recipes({ data }) {
+export default function QuienesSomos({ data }) {
   return (
     <div>
       <Objectives data={data} />
