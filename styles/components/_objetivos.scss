@@ -1,0 +1,20 @@
+.objetivos {
+  background-color: var(--pearl-bush);
+}
+
+.objetivos__title {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.objetivos__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 96px;
+}
+
+@media screen and (max-width: ($mobile-viewport)) {
+  .objetivos__container {
+    padding-top: 25px;
+  }
+}

@@ -34,3 +34,10 @@ export function getContentfulAliados(data) {
   dataContentful.aliadosComponents = sectionAliados.sectionComponents;
   return dataContentful;
 }
+
+export function getContentfulObjetivos(data) {
+  const sectionObjetivos = data.data.items[0].fields.components[3].fields;
+  dataContentful.sectionComponents = sectionObjetivos.sectionComponents;
+  dataContentful.sectionTitle = sectionObjetivos.sectionTitle;
+  return dataContentful;
+}
