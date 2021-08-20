@@ -43,26 +43,6 @@
   }
 }
 
-.alliesSlide__brands {
-  grid-column: 1/8;
-  grid-row: 2/3;
-  background-color: var(--orange);
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr;
-  padding: 14px 0;
-
-  :last-child {
-    border-right: none;
-  }
-
-  &--item {
-    border-right: 1px solid var(--white);
-    height: 76px;
-    margin: 0 14px;
-  }
-}
-
 @media screen and (max-width: ($tablet-viewport)) {
   .alliesSlide {
     grid-template-columns: repeat(2, 1fr);
@@ -91,17 +71,6 @@
       &--short {
         display: block;
       }
-    }
-  }
-
-  .alliesSlide__brands {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-gap: 0;
-    padding: 14px 85px;
-
-    &--item {
-      height: 38px;
     }
   }
 }
