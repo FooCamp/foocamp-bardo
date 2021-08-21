@@ -1,0 +1,74 @@
+.objectivesCard {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 92px;
+}
+
+.objectivesCard__text {
+  font-style: normal;
+  font-weight: 400;
+  width: 50%;
+  font-size: 1rem;
+  margin: 0;
+  margin-left: 25px;
+  line-height: 24px;
+  letter-spacing: 0.0015em;
+
+  b {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    letter-spacing: 0.0015em;
+  }
+}
+
+.objectivesCard__image {
+  width: 50%;
+  margin-left: 25px;
+  height: min-content;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+@media screen and (max-width: ($tablet-viewport)) {
+  .objectivesCard {
+    flex-direction: column;
+    width: 45%;
+    margin-bottom: 72px;
+  }
+
+  .objectivesCard__image,
+  .objectivesCard__text {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .objectivesCard__image {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: ($mobile-viewport)) {
+  .objectivesCard {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .objectivesCard__image,
+  .objectivesCard__text {
+    width: 100%;
+  }
+
+  .objectivesCard__text {
+    margin: 0;
+  }
+
+  .objectivesCard__image {
+    height: 170px;
+    object-fit: cover;
+    margin: 15px 0;
+  }
+}

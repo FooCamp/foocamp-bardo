@@ -27,10 +27,17 @@ export function getContentfulProfiles(data) {
   return profiles;
 }
 
-export function getContentfulAliados(data) {
-  const sectionAliados = data.items[0].fields.components[4].fields;
-  dataContentful.aliadosDescription = sectionAliados.sectionDescription;
-  dataContentful.aliadosTitle = sectionAliados.sectionTitle;
-  dataContentful.aliadosComponents = sectionAliados.sectionComponents;
+export function getContentfulAllies(data) {
+  const sectionAllies = data.data.items[0].fields.components[4].fields;
+  dataContentful.alliesDescription = sectionAllies.sectionDescription;
+  dataContentful.alliesTitle = sectionAllies.sectionTitle;
+  dataContentful.alliesComponents = sectionAllies.sectionComponents;
+  return dataContentful;
+}
+
+export function getContentfulObjectives(data) {
+  const sectionObjectives = data.data.items[0].fields.components[3].fields;
+  dataContentful.sectionComponents = sectionObjectives.sectionComponents;
+  dataContentful.sectionTitle = sectionObjectives.sectionTitle;
   return dataContentful;
 }
