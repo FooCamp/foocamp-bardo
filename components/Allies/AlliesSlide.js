@@ -1,4 +1,4 @@
-export default function AlliesSlide({ brandLogos, slideInfo }) {
+export default function AlliesSlide({ slideInfo }) {
   const image = slideInfo.testimonyImage.fields.file.url;
   const alternativeText = slideInfo.testimonyImage.fields.file.title;
   const shortText = slideInfo.testimonyText.split(/; ./, 1);
@@ -13,16 +13,6 @@ export default function AlliesSlide({ brandLogos, slideInfo }) {
         </section>
 
         <img className="alliesSlide__image" alt={alternativeText} src={image} />
-      </section>
-      <section className="alliesSlide__brands">
-        {brandLogos.map((logo) => (
-          <img
-            key={logo.fields.file.fileName}
-            className="alliesSlide__brands--item"
-            alt={logo.fields.file.title}
-            src={logo.fields.file.url}
-          />
-        ))}
       </section>
     </>
   );

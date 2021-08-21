@@ -7,6 +7,7 @@ import { getContentfulAllies } from '../../utils/contentful';
 export default function Allies(data) {
   const dataContentful = getContentfulAllies(data);
   const { alliesDescription, alliesTitle, alliesComponents } = dataContentful;
+  const { brandLogos } = alliesComponents[0].fields;
   return (
     <section className="alliesSection">
       <Container>
@@ -18,6 +19,16 @@ export default function Allies(data) {
           />
           <section className="alliesSection__carousel">
             <AlliesCarousel data={alliesComponents} />
+          </section>
+          <section className="alliesSection__brands">
+            {brandLogos.map((logo) => (
+              <img
+                key={logo.fields.file.fileName}
+                className="alliesSection__brands--item"
+                alt={logo.fields.file.title}
+                src={logo.fields.file.url}
+              />
+            ))}
           </section>
         </section>
       </Container>

@@ -7,7 +7,6 @@ SwiperCore.use([Pagination]);
 
 export default function AlliesCarousel({ data }) {
   const { carouselComponents } = data[0].fields;
-  const { brandLogos } = data[0].fields;
 
   return (
     <>
@@ -26,7 +25,6 @@ export default function AlliesCarousel({ data }) {
           <SwiperSlide key={slide.fields.identifier}>
             <AlliesSlide
               key={slide.fields.identifier}
-              brandLogos={brandLogos}
               slideInfo={slide.fields}
             />
           </SwiperSlide>
