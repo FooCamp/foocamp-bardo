@@ -11,13 +11,13 @@
   grid-template-columns: repeat(12, 1fr);
 
   &__title {
-    grid-column: 3/5;
+    color: var(--pueblo);
 
-    &--color {
-      color: var(--pueblo);
+    &__container {
+      grid-column: 3/5;
     }
 
-    &--eyebrow {
+    &__eyebrow {
       font-size: 0.625rem;
       line-height: 0.938rem;
       letter-spacing: 0.15em;
@@ -60,11 +60,11 @@
     }
 
     &__title {
-      padding-bottom: 16px;
+      font-size: 1.5rem;
+      line-height: 2.25rem;
 
-      &--color {
-        font-size: 1.5rem;
-        line-height: 2.25rem;
+      &__container {
+        padding-bottom: 16px;
       }
     }
   }
