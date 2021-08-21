@@ -1,5 +1,5 @@
 import getPageData from '../utils/api';
-import Objetivos from '../components/Objetivos/Objetivos';
+import Objectives from '../components/Objectives/Objectives';
 
 export const getServerSideProps = async () => {
   const pageData = await getPageData('quienes-somos');
@@ -12,10 +12,10 @@ export const getServerSideProps = async () => {
   };
 };
 
-export default function Recipes({ data }) {
+export default function QuienesSomos({ data }) {
   return (
     <div>
-      <Objetivos data={data} />
+      <Objectives data={data} />
     </div>
   );
 }
