@@ -6,7 +6,7 @@
   display: grid;
   padding: 53px 0 29px;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr auto auto;
   align-items: center;
 }
 
@@ -24,6 +24,28 @@
   margin: 81px 0 48px 0;
   grid-column: 2/12;
   grid-row: 2/3;
+}
+
+.alliesSection__brands {
+  grid-column: 2/12;
+  grid-row: 2/3;
+  background-color: var(--orange);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  padding: 14px 0;
+  align-self: end;
+  position: relative;
+  top: -99px;
+
+  :last-child {
+    border-right: none;
+  }
+
+  &--item {
+    border-right: 1px solid var(--white);
+    height: 76px;
+  }
 }
 
 @media screen and (max-width: ($tablet-viewport)) {
@@ -46,6 +68,20 @@
   .alliesSection__carousel {
     grid-column: 1/12;
     grid-row: 3;
-    margin: 18px 0 54px 0;
+    margin: 18px 0 0 0;
+  }
+
+  .alliesSection__brands {
+    grid-column: 1/12;
+    grid-row: 3;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    top: -89px;
+    padding: 14px 85px;
+
+    &--item {
+      height: 38px;
+    }
   }
 }
