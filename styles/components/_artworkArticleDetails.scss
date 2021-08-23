@@ -1,0 +1,59 @@
+.artwork-details {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__details-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 36px 0 36px 0;
+  }
+
+  &__title {
+    margin: 0 0 8px 0;
+  }
+
+  &__title-year {
+    margin: 0 0 29px 0;
+  }
+
+  &__description {
+    margin: 29px 0 64px 0;
+  }
+
+  &__information-container {
+    order: 1;
+  }
+
+  &__cta-container {
+    margin: 47px 0 63px 0;
+  }
+
+  &__separator {
+    background-color: var(--antique-brass);
+    height: 1px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: $tablet-viewport + 1) {
+  .artwork-details {
+    &__container {
+      max-width: 448px;
+      margin-left: 80px;
+    }
+
+    &__information-container {
+      order: 0;
+    }
+
+    &__details-container {
+      margin: 36px 0 55px 0;
+    }
+
+    &__cta-container {
+      margin: 49px 0 64px 0;
+    }
+  }
+}
