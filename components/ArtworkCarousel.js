@@ -37,13 +37,15 @@ export default function ArtworkCarousel({ artPiecesList }) {
     onTouchEnd: onMouseTouchEnd,
   };
 
-  const setCarrouselMobile = () => {
+  const setCarouselMobile = () => {
     const newArtPieces = { top: [], bottom: [] };
     for (let index = 1; index <= Math.ceil(artPiecesList.length / 2); index += 1) {
       const elements = [];
-      elements.push(artPiecesList[index * 2 - 2]);
+      const indexA = index * 2 - 2;
+      const indexB = index * 2 - 1;
+      elements.push({ ...artPiecesList[indexA], index: indexA });
       if (artPiecesList.length > (index * 2 - 1)) {
-        elements.push(artPiecesList[index * 2 - 1]);
+        elements.push({ ...artPiecesList[indexB], index: indexB });
       }
 
       if (index % 2 === 0) {
@@ -55,7 +57,7 @@ export default function ArtworkCarousel({ artPiecesList }) {
     setArtPieces(newArtPieces);
   };
 
-  const setCarrouselDesktop = () => {
+  const setCarouselDesktop = () => {
     const newArtPieces = { top: [], bottom: [] };
     newArtPieces.top = artPiecesList.reduce(
       (prev, current, index) => prev.concat({ ...current, index }),
@@ -66,9 +68,9 @@ export default function ArtworkCarousel({ artPiecesList }) {
 
   useEffect(() => {
     if (viewport === 'mobile') {
-      setCarrouselMobile();
+      setCarouselMobile();
     } else {
-      setCarrouselDesktop();
+      setCarouselDesktop();
     }
   }, [viewport]);
 
