@@ -1,5 +1,6 @@
 import { getContentfulStatements } from '../../utils/contentful';
 import Statement from './Statement';
+import Container from '../Container';
 
 export default function Statements(props) {
   const statements = getContentfulStatements(props);
@@ -20,7 +21,7 @@ export default function Statements(props) {
   return (
     <section className="statements">
       <div className="line" />
-      <div className="statements__wrapper">
+      <Container className="statements__wrapper">
         <Statement
           eyebrow={misionEyebrow}
           title={misionTitle}
@@ -31,7 +32,7 @@ export default function Statements(props) {
           title={visionTitle}
           description={visionDescription}
         />
-      </div>
+      </Container>
     </section>
   );
 }
