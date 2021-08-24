@@ -60,3 +60,8 @@ export function getContentfulStatements(data) {
   const statements = data.data.items[0].fields.components[2].fields.sectionComponents;
   return statements;
 }
+
+export function getContentfulImpactLevels(data) {
+  const impactData = data.items[0].fields.components[2].fields;
+  return impactData;
+}
