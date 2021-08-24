@@ -11,6 +11,20 @@ export function getContentfulHeroData(data) {
   return dataContentful;
 }
 
+export function getContentfulHeroChildData(data) {
+  const {
+    heroImage, heroTag, heroTitle, heroDescription, identifier,
+  } = data.items[0].fields.components[1].fields;
+
+  dataContentful.heroChildImage = heroImage;
+  dataContentful.heroChildTag = heroTag;
+  dataContentful.heroChildTitle = heroTitle;
+  dataContentful.heroChildDescription = heroDescription;
+  dataContentful.identifier = identifier;
+
+  return dataContentful;
+}
+
 export function getContentfulArtworkData(data) {
   const artworkData = data.items[0].fields.components[3].fields;
   return artworkData;

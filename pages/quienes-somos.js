@@ -1,5 +1,6 @@
 import getPageData from '../utils/api';
 import Objectives from '../components/Objectives/Objectives';
+import ChildHero from '../components/Hero/ChildHero';
 import Statements from '../components/Statements/Statements';
 
 export const getServerSideProps = async () => {
@@ -18,6 +19,7 @@ export default function QuienesSomos({ data }) {
     <div>
       <Statements data={data} />
       <Objectives data={data} />
+      <ChildHero data={data} />
     </div>
   );
 }
