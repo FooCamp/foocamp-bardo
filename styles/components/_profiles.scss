@@ -25,12 +25,6 @@
   }
 }
 
-.line {
-  width: 100%;
-  height: 11px;
-  background-color: var(--tuscany);
-}
-
 @media screen and (max-width: ($tablet-viewport+1)) {
   .profiles {
     background-color: var(--white);

@@ -32,3 +32,10 @@
 @import "swiper/components/pagination/pagination.scss";
 @import "./components/objectives";
 @import "./components/objectivesCard";
+@import "./components/statement.scss";
+
+@media screen and (max-width: ($tablet-viewport+1)) {
+  .line {
+    height: 2px;
+  }
+}

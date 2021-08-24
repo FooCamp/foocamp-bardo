@@ -55,3 +55,8 @@ export function getContentfulObjectives(data) {
   dataContentful.sectionTitle = sectionObjectives.sectionTitle;
   return dataContentful;
 }
+
+export function getContentfulStatements(data) {
+  const statements = data.data.items[0].fields.components[2].fields.sectionComponents;
+  return statements;
+}
