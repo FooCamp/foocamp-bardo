@@ -21,7 +21,7 @@ export default function ImpactLevel({ level, index }) {
       />
       <div className="impact-level__text">
         <b className="impact-level__title-number">{index + 1}</b>
-        <b className="impact-level__title">{title}</b>
+        <h6 className="impact-level__title">{title}</h6>
         <p className="impact-level__description">{description}</p>
       </div>
     </div>

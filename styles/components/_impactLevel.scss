@@ -20,22 +20,24 @@
 
     &__title,
     &__title-number {
-      font-size: 20px;
-      line-height: 30px;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
       letter-spacing: 0.0015em;
       color: var(--pueblo);
       margin-right: 8px;
+      display: inline;
+      font-weight: 500;
     }
 
     &__title-number {
       &::after {
-        content: ". ";
+        content: ".";
       }
     }
 
     &__description {
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 1rem;
+      line-height: 1.5rem;
       letter-spacing: 0.001em;
       color: var(--cod-gray);
       display: inline;
