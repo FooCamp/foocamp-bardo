@@ -17,9 +17,9 @@ export const getServerSideProps = async () => {
 export default function QuienesSomos({ data }) {
   return (
     <div>
+      <ChildHero data={data} />
       <Statements data={data} />
       <Objectives data={data} />
-      <ChildHero data={data} />
     </div>
   );
 }
