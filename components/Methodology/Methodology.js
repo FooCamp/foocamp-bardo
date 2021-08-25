@@ -9,7 +9,6 @@ export default function Methodology({ data }) {
   const { sectionTitle, sectionDescription, sectionImages } = methodologyData;
 
   return (
-    // <article id={identifier} className="methodology--child">
     <section className="methodology">
       <Container className="methodology__container">
         <div className="methodology__container--child">
@@ -43,6 +42,5 @@ export default function Methodology({ data }) {
         </div>
       </Container>
     </section>
-    // </article>
   );
 }
