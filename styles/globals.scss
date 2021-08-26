@@ -34,6 +34,7 @@
 @import "./components/objectivesCard";
 @import "./components/statement.scss";
 @import "./components/impactLevel";
+@import "./components/methodology.scss";
 
 @media screen and (max-width: ($tablet-viewport+1)) {
   .line {

@@ -65,3 +65,8 @@ export function getContentfulImpactLevels(data) {
   const impactData = data.items[0].fields.components[2].fields;
   return impactData;
 }
+
+export function getContentfulMethodologyData(data) {
+  const methodology = data.items[0].fields.components[3].fields;
+  return methodology;
+}
