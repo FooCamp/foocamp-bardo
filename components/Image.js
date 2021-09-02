@@ -3,10 +3,16 @@ export default function Image({
   alternativeText,
   classNameWrapper,
   className,
+  roleName,
 }) {
   return (
     <div className={classNameWrapper}>
-      <img src={url} alt={alternativeText} className={className} />
+      <img
+        role={roleName}
+        src={url}
+        alt={alternativeText}
+        className={className}
+      />
     </div>
   );
 }
