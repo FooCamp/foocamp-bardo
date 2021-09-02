@@ -6,8 +6,7 @@
   }
 
   &__title {
-    font-size: 24px;
-    line-height: 36px;
+    @include font-h5;
   }
 }
 
@@ -25,8 +24,7 @@
     }
 
     &__title {
-      font-size: 3rem;
-      line-height: 4.5rem;
+      @include font-h3;
     }
 
     &__list {
