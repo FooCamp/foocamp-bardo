@@ -1,0 +1,37 @@
+.profile-detail {
+  margin: 48px 0;
+
+  &__header {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@media screen and (min-width: ($tablet-viewport+1)) {
+  .profile-detail {
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(2, auto);
+    }
+
+    &__header {
+      grid-row: 1/2;
+      grid-column: 1/13;
+    }
+
+    &__title {
+      font-size: 3rem;
+      line-height: 4.5rem;
+    }
+
+    &__list {
+      grid-row: 2/3;
+      grid-column: 3/11;
+    }
+  }
+}
