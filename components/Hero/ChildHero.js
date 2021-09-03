@@ -12,8 +12,7 @@ export default function ChildHero({ data }) {
 
   return (
     <article id={identifier} className="hero hero--child">
-
-      <section className="hero__section--child">
+      <section className="hero__section hero__section--child hero__section--first-item-on-desktop">
         <Image
           url={heroChildImage.fields.file.url}
           alternativeText="Alt text"
@@ -22,7 +21,7 @@ export default function ChildHero({ data }) {
         />
       </section>
 
-      <section className="hero__section--child">
+      <section className="hero__section hero__section--child">
         <HeroTag
           className="hero__tag--child"
           classNameWrapper="hero__tag-wrapper--child"
