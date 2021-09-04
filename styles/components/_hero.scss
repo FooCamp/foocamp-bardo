@@ -4,7 +4,6 @@
     background-color: var(--pearl-bush);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     flex-grow: 0;
   }
 
@@ -93,13 +92,12 @@
 @media screen and (min-width: $tablet-viewport) {
   .hero {
     &--home {
-      flex-direction: row-reverse;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
     }
 
     &--child {
-      flex-direction: column-reverse;
       padding: 89px 0 45px 0;
       align-items: center;
     }
@@ -125,6 +123,14 @@
         position: relative;
         margin-top: 20px;
       }
+
+      &--first-item-on-desktop {
+        order: 1;
+      }
+    }
+
+    &__section--media {
+      order: 1;
     }
 
     &__stamp-wrapper {
