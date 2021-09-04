@@ -1,0 +1,35 @@
+.profile-detail {
+  margin: 48px 0;
+
+  &__header {
+    text-align: center;
+  }
+
+  &__title {
+    @include font-h5;
+  }
+}
+
+@media screen and (min-width: ($tablet-viewport+1)) {
+  .profile-detail {
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(2, auto);
+    }
+
+    &__header {
+      grid-row: 1/2;
+      grid-column: 1/13;
+    }
+
+    &__title {
+      @include font-h3;
+    }
+
+    &__list {
+      grid-row: 2/3;
+      grid-column: 3/11;
+    }
+  }
+}

@@ -32,9 +32,11 @@
 @import "swiper/components/pagination/pagination.scss";
 @import "./components/objectives";
 @import "./components/objectivesCard";
-@import "./components/statement.scss";
+@import "./components/statement";
 @import "./components/impactLevel";
-@import "./components/methodology.scss";
+@import "./components/methodology";
+@import "./components/profileDetail";
+@import "./components/profileDetailEl";
 
 @media screen and (max-width: ($tablet-viewport+1)) {
   .line {
