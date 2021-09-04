@@ -11,6 +11,7 @@ export default function ProfileDetail({ detail }) {
         classNameWrapper="profile-detail-el__w-img"
         className="profile-detail-el__img"
         alternativeText=""
+        roleName="decorative"
       />
       <p className="profile-detail-el__text">{description}</p>
     </article>

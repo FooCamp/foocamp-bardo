@@ -12,12 +12,14 @@ export default function ImpactLevel({ level, index }) {
         alternativeText=""
         className="impact-level__image-content"
         classNameWrapper="impact-level__image"
+        roleName="decorative"
       />
       <Image
         url={numberUrl}
         alternativeText=""
         className="impact-level__number-img"
         classNameWrapper="impact-level__number"
+        roleName="decorative"
       />
       <div className="impact-level__text">
         <b className="impact-level__title-number">{index + 1}</b>
