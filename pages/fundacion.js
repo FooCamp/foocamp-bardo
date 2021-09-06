@@ -14,7 +14,6 @@ export const getServerSideProps = async () => {
 };
 
 export default function fundacion({ data }) {
-  console.log(data);
   return (
     <div>
       <ProfileDetail data={data} />
