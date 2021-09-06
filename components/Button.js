@@ -1,8 +1,8 @@
 export default function Button({
-  text, buttonstyle, onclick, ariaLabel,
+  text, buttonstyle, containerStyle, onclick, ariaLabel,
 }) {
   return (
-    <div className="button__container">
+    <div className={`button__container ${containerStyle}`}>
       <button
         type="button"
         className={buttonstyle}
