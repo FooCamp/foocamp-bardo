@@ -1,13 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import SwiperCore, { Pagination } from 'swiper/core';
-import AliadosSlide from './AliadosSlide';
+import AlliesSlide from './AlliesSlide';
 
 SwiperCore.use([Pagination]);
 
-export default function AliadosCarousel({ data }) {
+export default function AlliesCarousel({ data }) {
   const { carouselComponents } = data[0].fields;
-  const { brandLogos } = data[0].fields;
 
   return (
     <>
@@ -17,16 +16,15 @@ export default function AliadosCarousel({ data }) {
           clickable: true,
           type: 'bullets',
           bulletElement: 'span',
-          bulletClass: 'aliadosBullet',
-          bulletActiveClass: 'aliadosBullet-active',
+          bulletClass: 'alliesBullet',
+          bulletActiveClass: 'alliesBullet-active',
         }}
-        className="aliadosCarousel"
+        className="alliesCarousel"
       >
         {carouselComponents.map((slide) => (
           <SwiperSlide key={slide.fields.identifier}>
-            <AliadosSlide
+            <AlliesSlide
               key={slide.fields.identifier}
-              brandLogos={brandLogos}
               slideInfo={slide.fields}
             />
           </SwiperSlide>

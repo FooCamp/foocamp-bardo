@@ -26,7 +26,20 @@
 @import "./components/profileCard";
 @import "./components/profiles";
 @import "./components/hero";
-@import "./components/aliadosSection";
-@import "./components/aliadosSlide";
-@import "./components/aliadosCarousel";
+@import "./components/alliesSection";
+@import "./components/alliesSlide";
+@import "./components/alliesCarousel";
 @import "swiper/components/pagination/pagination.scss";
+@import "./components/objectives";
+@import "./components/objectivesCard";
+@import "./components/statement";
+@import "./components/impactLevel";
+@import "./components/methodology";
+@import "./components/profileDetail";
+@import "./components/profileDetailEl";
+
+@media screen and (max-width: ($tablet-viewport+1)) {
+  .line {
+    height: 2px;
+  }
+}

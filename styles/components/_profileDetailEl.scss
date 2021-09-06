@@ -1,0 +1,49 @@
+@use "sass:math";
+
+.profile-detail-el {
+  margin: 48px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__w-img {
+    overflow: hidden;
+    border-radius: 24px 0;
+    width: 100%;
+  }
+
+  &__img {
+    margin-top: -25%;
+    margin-bottom: -25%;
+    height: auto;
+  }
+
+  &__text {
+    @include font-subtitle1;
+  }
+}
+
+@media screen and (min-width: ($tablet-viewport+1)) {
+  .profile-detail-el {
+    margin: 80px 0;
+    flex-direction: row;
+
+    &__w-img {
+      margin-right: 5.8%;
+      min-width: 260px;
+    }
+
+    &__img {
+      margin: 0;
+    }
+
+    &:nth-of-type(2n) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-of-type(2n) &__w-img {
+      margin-right: 0;
+      margin-left: 5.8%;
+    }
+  }
+}

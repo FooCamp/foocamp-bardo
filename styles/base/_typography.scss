@@ -16,13 +16,25 @@ body {
 
       color: var(--pueblo);
     }
+
+    &--child {
+      @include font-overline;
+
+      color: var(--pueblo);
+    }
   }
 
   &__title {
-    margin: 0;
     padding: 0;
+    margin: 0;
 
     &--home {
+      @include font-h3;
+
+      color: var(--tuscany);
+    }
+
+    &--child {
       @include font-h3;
 
       color: var(--tuscany);
@@ -30,10 +42,21 @@ body {
   }
 
   &__body {
-    margin: 0;
     padding: 0;
+    margin: 0;
 
     &--home {
+      @include font-subtitle1;
+
+      color: var(--cod-gray);
+
+      b {
+        background-color: var(--pink);
+        font-weight: 500;
+      }
+    }
+
+    &--child {
       @include font-subtitle1;
 
       color: var(--cod-gray);
@@ -52,11 +75,29 @@ body {
       &--home {
         @include font-h3;
       }
+
+      &--child {
+        @include font-h2;
+
+        text-align: center;
+      }
     }
 
     &__body {
       &--home {
         @include font-h6;
+      }
+
+      &--child {
+        @include font-body1;
+
+        text-align: center;
+      }
+    }
+
+    &__tag {
+      &--child {
+        text-align: center;
       }
     }
   }

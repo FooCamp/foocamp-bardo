@@ -1,4 +1,4 @@
-.aliadosBullet {
+.alliesBullet {
   width: 15.85px;
   height: 16px;
   background: var(--white);
@@ -7,16 +7,16 @@
   cursor: pointer;
   margin-right: 15.85px;
   border: 1px solid var(--white);
-  margin-top: 32px;
+  margin-top: 132px;
   box-sizing: border-box;
   box-shadow: 1px 1px 1px 1px #cdcdcd;
 }
 
-.aliadosBullet-active {
+.alliesBullet-active {
   background: var(--pueblo);
 }
 
-.aliadosCarousel {
+.alliesCarousel {
   display: flex;
   flex-direction: column;
 
@@ -35,7 +35,7 @@
 }
 
 @media screen and (max-width: ($mobile-viewport)) {
-  .aliadosBullet {
+  .alliesBullet {
     width: 8px;
     height: 8px;
     margin-top: 29px;

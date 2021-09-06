@@ -11,6 +11,20 @@ export function getContentfulHeroData(data) {
   return dataContentful;
 }
 
+export function getContentfulHeroChildData(data) {
+  const {
+    heroImage, heroTag, heroTitle, heroDescription, identifier,
+  } = data.items[0].fields.components[1].fields;
+
+  dataContentful.heroChildImage = heroImage;
+  dataContentful.heroChildTag = heroTag;
+  dataContentful.heroChildTitle = heroTitle;
+  dataContentful.heroChildDescription = heroDescription;
+  dataContentful.identifier = identifier;
+
+  return dataContentful;
+}
+
 export function getContentfulArtworkData(data) {
   const artworkData = data.items[0].fields.components[3].fields;
   return artworkData;
@@ -27,10 +41,37 @@ export function getContentfulProfiles(data) {
   return profiles;
 }
 
-export function getContentfulAliados(data) {
-  const sectionAliados = data.items[0].fields.components[4].fields;
-  dataContentful.aliadosDescription = sectionAliados.sectionDescription;
-  dataContentful.aliadosTitle = sectionAliados.sectionTitle;
-  dataContentful.aliadosComponents = sectionAliados.sectionComponents;
+export function getContentfulAllies(data) {
+  const sectionAllies = data.data.items[0].fields.components[4].fields;
+  dataContentful.alliesDescription = sectionAllies.sectionDescription;
+  dataContentful.alliesTitle = sectionAllies.sectionTitle;
+  dataContentful.alliesComponents = sectionAllies.sectionComponents;
   return dataContentful;
+}
+
+export function getContentfulObjectives(data) {
+  const sectionObjectives = data.data.items[0].fields.components[3].fields;
+  dataContentful.sectionComponents = sectionObjectives.sectionComponents;
+  dataContentful.sectionTitle = sectionObjectives.sectionTitle;
+  return dataContentful;
+}
+
+export function getContentfulStatements(data) {
+  const statements = data.data.items[0].fields.components[2].fields.sectionComponents;
+  return statements;
+}
+
+export function getContentfulImpactLevels(data) {
+  const impactData = data.items[0].fields.components[2].fields;
+  return impactData;
+}
+
+export function getContentfulMethodologyData(data) {
+  const methodology = data.items[0].fields.components[3].fields;
+  return methodology;
+}
+
+export function getContentfulProfileDetail(data) {
+  const profileDetailData = data.items[0].fields.components[2].fields;
+  return profileDetailData;
 }
