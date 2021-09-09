@@ -4,7 +4,7 @@ import HeroTag from './HeroTag';
 import HeroBody from './HeroBody';
 import HeroMedia from './HeroMedia';
 
-export default function HomeHero(props) {
+export default function HeroHome(props) {
   const HomeHeroData = getContentfulHeroData(props);
   const {
     heroImage, heroTag, heroTitle, heroDescription, identifier,

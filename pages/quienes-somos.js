@@ -1,25 +1,28 @@
 import getPageData from '../utils/api';
-import Objectives from '../components/Objectives/Objectives';
-import HeroChild from '../components/Hero/HeroChild';
-import Statements from '../components/Statements/Statements';
+import { getContentfulComponentList } from '../utils/contentful';
+import pageComponentPool from '../utils/pageComponentPool';
+import ComponentList from '../components/ComponentList';
 
 export const getServerSideProps = async () => {
   const pageData = await getPageData('quienes-somos');
+  const componentNameList = getContentfulComponentList(pageData);
 
   return {
     props: {
       data: { ...pageData },
-      components: [] /* pageData.fields.components */,
+      componentNameList,
     },
   };
 };
 
-export default function QuienesSomos({ data }) {
+export default function QuienesSomos({ data, componentNameList }) {
   return (
     <div>
-      <HeroChild data={data} />
-      <Statements data={data} />
-      <Objectives data={data} />
+      <ComponentList
+        data={data}
+        componentList={pageComponentPool}
+        componentNameList={componentNameList}
+      />
     </div>
   );
 }

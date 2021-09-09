@@ -1,23 +1,28 @@
-import ProfileDetail from '../components/ProfileDetail';
-import HeroProfile from '../components/Hero/HeroProfile';
 import getPageData from '../utils/api';
+import { getContentfulComponentList } from '../utils/contentful';
+import ComponentList from '../components/ComponentList';
+import pageComponentPool from '../utils/pageComponentPool';
 
 export const getServerSideProps = async () => {
   const pageData = await getPageData('patrocinador');
+  const componentNameList = getContentfulComponentList(pageData);
 
   return {
     props: {
       data: { ...pageData },
-      components: [] /* pageData.fields.components */,
+      componentNameList,
     },
   };
 };
 
-export default function patrocinador({ data }) {
+export default function patrocinador({ data, componentNameList }) {
   return (
     <div>
-      <HeroProfile data={data} />
-      <ProfileDetail data={data} />
+      <ComponentList
+        data={data}
+        componentList={pageComponentPool}
+        componentNameList={componentNameList}
+      />
     </div>
   );
 }

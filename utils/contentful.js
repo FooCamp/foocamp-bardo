@@ -102,3 +102,9 @@ export function getContentfulProfileHeroData(data) {
 export function getContentfulArtworkDetailsButtonData(data) {
   return data.items[0].fields.components[3].fields;
 }
+
+export function getContentfulComponentList(data) {
+  const componentList = data.items[0].fields.components.slice(1, -1)
+    .map((component) => component.fields.identifier);
+  return componentList;
+}
