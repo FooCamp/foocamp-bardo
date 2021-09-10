@@ -69,7 +69,41 @@ body {
   }
 }
 
-@media screen and (min-width: $tablet-viewport) {
+.artwork-details {
+  &__title {
+    @include font-h5;
+  }
+
+  &__title-year {
+    @include font-subtitle2;
+  }
+
+  &__body-text {
+    @include font-body2;
+  }
+}
+
+.artwork-article {
+  &__eyebrow {
+    @include font-overline;
+
+    color: var(--pueblo);
+  }
+
+  &__title {
+    @include font-h3;
+
+    color: var(--tuscany);
+  }
+
+  &__description {
+    @include font-body1;
+
+    color: var(--cod-gray);
+  }
+}
+
+@media screen and (min-width: $tablet-viewport + 1) {
   .hero {
     &__title {
       &--home {
@@ -99,6 +133,28 @@ body {
       &--child {
         text-align: center;
       }
+    }
+  }
+
+  .artwork-details {
+    &__title {
+      @include font-h4;
+    }
+  }
+
+  .artwork-article {
+    &__eyebrow {
+      text-align: center;
+    }
+
+    &__title {
+      text-align: center;
+
+      @include font-h2;
+    }
+
+    &__description {
+      text-align: center;
     }
   }
 }

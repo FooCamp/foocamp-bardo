@@ -37,6 +37,9 @@
 @import "./components/methodology";
 @import "./components/profileDetail";
 @import "./components/profileDetailEl";
+@import "./components/artworkImageGallery";
+@import "./components/artworkArticle";
+@import "./components/artworkArticleDetails";
 
 @media screen and (max-width: ($tablet-viewport+1)) {
   .line {
