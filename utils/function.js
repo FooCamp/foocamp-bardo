@@ -23,4 +23,10 @@ const range = (from, to) => {
   return listRange;
 };
 
-export { debounce, range };
+const camelize = (text) => text.replace(/-./g, (x) => x.toUpperCase()[1]);
+
+const kebabize = (text) => text.replace(/[A-Z]+(?![a-z])|[A-Z]/g, (x, ofs) => (ofs ? '-' : '') + x.toLowerCase());
+
+export {
+  debounce, range, camelize, kebabize,
+};

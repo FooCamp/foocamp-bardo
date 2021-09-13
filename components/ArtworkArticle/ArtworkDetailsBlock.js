@@ -28,7 +28,7 @@ export default function ArtworkDetailsBlock({ data }) {
         <Button
           buttonstyle="button button--secondary button--artwork button--artwork-return"
           text="VER MÁS OBRAS"
-          onclick={() => openInCurrentTab('/')}
+          onclick={() => openInCurrentTab('/#obras')}
         />
       </div>
     </section>

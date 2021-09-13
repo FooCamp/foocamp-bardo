@@ -1,5 +1,6 @@
 .artwork {
   background-color: var(--pearl-bush);
+  scroll-behavior: smooth;
 
   &__header {
     padding: 35px $mobile-margin;
