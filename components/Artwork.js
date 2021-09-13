@@ -12,7 +12,7 @@ export default function Artwork({ data }) {
   const { artPiecesList } = sectionComponents[0].fields;
 
   return (
-    <section className="artwork">
+    <section className="artwork" id="obras">
       <Container className="artwork__header">
         <div className="artwork__title">
           <Title data={sectionTitle} />

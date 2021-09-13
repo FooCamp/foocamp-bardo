@@ -1,3 +1,5 @@
+import { camelize } from './function';
+
 const dataContentful = {};
 
 export function getContentfulHeaderData(data) {
@@ -35,8 +37,9 @@ export function getContentfulSingleArtworkData(data, selectedArtworkName) {
     .items[0].fields.components[3].fields.sectionComponents[0].fields.artPiecesList;
 
   const selectedArtworkData = allArtworkData.find((artwork) => {
-    const artworkName = artwork.fields.identifier.replace(/Card/g, '');
-    return selectedArtworkName === artworkName;
+    const { identifier } = artwork.fields;
+    const artworkName = identifier.replace(/Card/g, '');
+    return camelize(selectedArtworkName) === artworkName;
   });
 
   return selectedArtworkData;
