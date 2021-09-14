@@ -1,17 +1,22 @@
 .hero {
+  background-color: var(--pearl-bush);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
   &--home {
     width: 100%;
     background-color: var(--pearl-bush);
-    display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     flex-grow: 0;
   }
 
   &--child {
-    display: flex;
-    flex-direction: column;
     padding: 48px 0 56px 0;
-    background-color: var(--pearl-bush);
+  }
+
+  &--profile {
+    padding: 48px 16px 33px 16px;
   }
 
   &__section {
@@ -46,6 +51,10 @@
     &--child {
       min-height: 293px;
     }
+
+    &--profile {
+      max-height: 294px;
+    }
   }
 
   &__image-wrapper {
@@ -65,6 +74,10 @@
     &--child {
       padding: 43px 0 0 0;
       top: 0;
+    }
+
+    &--profile {
+      padding: 42px 0 0 0;
     }
   }
 
@@ -87,9 +100,15 @@
       padding: 10px 0 0 0;
     }
   }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 0 0;
+  }
 }
 
-@media screen and (min-width: $tablet-viewport) {
+@media screen and (min-width: $tablet-viewport + 1) {
   .hero {
     &--home {
       flex-direction: row;
@@ -100,6 +119,12 @@
     &--child {
       padding: 89px 0 45px 0;
       align-items: center;
+    }
+
+    &--profile {
+      flex-direction: row;
+      justify-content: center;
+      padding: 92px 16px 97px 16px;
     }
 
     &__image-wrapper {
@@ -116,12 +141,20 @@
       &--home {
         max-height: 719px;
       }
+
+      &--profile {
+        max-height: 466px;
+      }
     }
 
     &__section {
       &--home {
         position: relative;
         margin-top: 20px;
+      }
+
+      &--profile-text {
+        margin: 0 0 0 49px;
       }
 
       &--first-item-on-desktop {
@@ -149,6 +182,10 @@
       &--child {
         padding: 0 0 0 0;
       }
+
+      &--profile {
+        padding: 0 0 0 0;
+      }
     }
 
     &__title-wrapper {
@@ -158,6 +195,10 @@
 
       &--child {
         padding: 6px 0 0 0;
+      }
+
+      &--profile {
+        padding: 7px 0 0 0;
       }
     }
 
@@ -170,6 +211,18 @@
         padding: 16px 0 0 0;
         max-width: 686px;
       }
+
+      &--profile {
+        max-width: 533px;
+        padding: 42px 0 0 0;
+      }
+    }
+
+    &__button-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 48px 0 0 0;
+      width: fit-content;
     }
   }
 }

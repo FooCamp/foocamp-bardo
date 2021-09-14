@@ -11,7 +11,7 @@ export default function HomeHero(props) {
   } = HomeHeroData.hero;
 
   return (
-    <article id={identifier} className="hero--home">
+    <article id={identifier} className="hero hero--home">
       <section className="hero__section hero__section--home hero__section--media">
         <HeroMedia heroImage={heroImage} />
       </section>

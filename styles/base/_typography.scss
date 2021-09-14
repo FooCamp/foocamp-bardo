@@ -8,63 +8,42 @@ body {
 
 .hero {
   &__tag {
+    @include font-overline;
+
     padding: 0;
     margin: 0;
-
-    &--home {
-      @include font-overline;
-
-      color: var(--pueblo);
-    }
-
-    &--child {
-      @include font-overline;
-
-      color: var(--pueblo);
-    }
+    color: var(--pueblo);
   }
 
   &__title {
+    @include font-h3;
+
     padding: 0;
     margin: 0;
+    color: var(--tuscany);
 
-    &--home {
-      @include font-h3;
-
-      color: var(--tuscany);
-    }
-
-    &--child {
-      @include font-h3;
-
-      color: var(--tuscany);
+    &--profile {
+      b {
+        font-weight: normal;
+        background-color: var(--pink);
+      }
     }
   }
 
   &__body {
+    @include font-subtitle1;
+
     padding: 0;
     margin: 0;
+    color: var(--cod-gray);
 
-    &--home {
-      @include font-subtitle1;
-
-      color: var(--cod-gray);
-
-      b {
-        background-color: var(--pink);
-        font-weight: 500;
-      }
+    &--profile {
+      @include font-body1;
     }
 
-    &--child {
-      @include font-subtitle1;
-
-      color: var(--cod-gray);
-
-      b {
-        background-color: var(--pink);
-        font-weight: 500;
-      }
+    b {
+      background-color: var(--pink);
+      font-weight: 500;
     }
   }
 }
@@ -106,14 +85,17 @@ body {
 @media screen and (min-width: $tablet-viewport + 1) {
   .hero {
     &__title {
-      &--home {
-        @include font-h3;
-      }
+      @include font-h2;
 
       &--child {
-        @include font-h2;
-
         text-align: center;
+      }
+
+      &--profile {
+        b {
+          background-color: var(--pink);
+          font-weight: normal;
+        }
       }
     }
 
