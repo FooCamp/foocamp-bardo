@@ -1,9 +1,9 @@
 export default function Button({
-  text, buttonstyle, onclick, ariaLabel, disabled,
+  text, buttonstyle, containerStyle, onclick, ariaLabel, disabled
 }) {
   const disabledButton = disabled || false;
   return (
-    <div className="button__container">
+    <div className={`button__container ${containerStyle}`}>
       <button
         type="button"
         className={buttonstyle}

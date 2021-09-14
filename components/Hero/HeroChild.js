@@ -4,7 +4,7 @@ import HeroTag from './HeroTag';
 import HeroBody from './HeroBody';
 import Image from '../Image';
 
-export default function ChildHero({ data }) {
+export default function HeroChild({ data }) {
   const heroChildData = getContentfulHeroChildData(data);
   const {
     heroChildImage, heroChildTag, heroChildTitle, heroChildDescription, identifier,
