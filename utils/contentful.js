@@ -30,6 +30,22 @@ export function getContentfulArtworkData(data) {
   return artworkData;
 }
 
+export function getContentfulSingleArtworkData(data, selectedArtworkName) {
+  const allArtworkData = data
+    .items[0].fields.components[3].fields.sectionComponents[0].fields.artPiecesList;
+
+  const selectedArtworkData = allArtworkData.find((artwork) => {
+    const artworkName = artwork.fields.identifier.replace(/Card/g, '');
+    return selectedArtworkName === artworkName;
+  });
+
+  return selectedArtworkData;
+}
+
+export function getContentfulArtworkDetailsPageData(data) {
+  return data.items[0].fields.components[1].fields;
+}
+
 export function getContentfulFooterData(data) {
   const positionFooter = data.items[0].fields.components.length - 1;
   const footerData = data.items[0].fields.components[positionFooter].fields;
