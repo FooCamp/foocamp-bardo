@@ -1,4 +1,5 @@
 import ProfileDetail from '../components/ProfileDetail';
+import HeroProfile from '../components/Hero/HeroProfile';
 import getPageData from '../utils/api';
 
 export const getServerSideProps = async () => {
@@ -15,6 +16,7 @@ export const getServerSideProps = async () => {
 export default function patrocinador({ data }) {
   return (
     <div>
+      <HeroProfile data={data} />
       <ProfileDetail data={data} />
     </div>
   );

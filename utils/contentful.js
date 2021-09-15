@@ -94,3 +94,7 @@ export function getContentfulProfileDetail(data) {
   const profileDetailData = data.items[0].fields.components[2].fields;
   return profileDetailData;
 }
+
+export function getContentfulProfileHeroData(data) {
+  return data.items[0].fields.components[1].fields;
+}
