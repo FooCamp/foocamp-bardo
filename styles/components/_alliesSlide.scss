@@ -4,6 +4,7 @@
   align-items: center;
   grid-template-rows: 1fr auto;
   background-color: var(--white);
+  padding-bottom: 105px;
 
   &__text {
     grid-column: 1/8;
@@ -47,6 +48,7 @@
   .alliesSlide {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 191px 1fr auto;
+    padding-bottom: 55px;
 
     &__image {
       grid-column: 1 / span 12;

@@ -2,8 +2,7 @@
   &__header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    padding: 58px $desktop-margin;
-    height: 260px;
+    padding: 70px $desktop-margin;
   }
 
   &__title {
@@ -16,6 +15,10 @@
     }
   }
 
+  &__stamp {
+    position: absolute;
+  }
+
   &__subtitle {
     grid-column: 7/13;
   }
@@ -25,13 +28,12 @@
   }
 }
 
-@media screen and (max-width: ($tablet-viewport+1)) {
+@media screen and (max-width: ($tablet-viewport)) {
   .profiles {
     background-color: var(--white);
 
     &__header {
       padding: 35px $mobile-margin;
-      height: 300px;
       display: flex;
       flex-direction: column;
     }
@@ -54,12 +56,16 @@
     &__title {
       display: flex;
       flex-direction: row-reverse;
-      width: 90%;
+      justify-content: space-between;
 
       img {
         margin-top: 13px;
         margin-right: -24px;
       }
+    }
+
+    &__stamp {
+      position: initial;
     }
 
     .line {
