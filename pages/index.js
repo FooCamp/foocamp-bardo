@@ -1,6 +1,6 @@
 import getPageData from '../utils/api';
 import Artwork from '../components/Artwork';
-import HomeHero from '../components/Hero/HomeHero';
+import HeroHome from '../components/Hero/HeroHome';
 import Profiles from '../components/Profiles';
 import Allies from '../components/Allies/AlliesSection';
 
@@ -18,7 +18,7 @@ export const getServerSideProps = async () => {
 export default function Home({ data }) {
   return (
     <div className="home">
-      <HomeHero data={data} />
+      <HeroHome data={data} />
       <Profiles data={data} />
       <Artwork data={data} />
       <Allies data={data} />

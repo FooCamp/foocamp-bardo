@@ -1,3 +1,5 @@
+import { camelize } from './function';
+
 const dataContentful = {};
 
 export function getContentfulHeaderData(data) {
@@ -28,6 +30,23 @@ export function getContentfulHeroChildData(data) {
 export function getContentfulArtworkData(data) {
   const artworkData = data.items[0].fields.components[3].fields;
   return artworkData;
+}
+
+export function getContentfulSingleArtworkData(data, selectedArtworkName) {
+  const allArtworkData = data
+    .items[0].fields.components[3].fields.sectionComponents[0].fields.artPiecesList;
+
+  const selectedArtworkData = allArtworkData.find((artwork) => {
+    const { identifier } = artwork.fields;
+    const artworkName = identifier.replace(/Card/g, '');
+    return camelize(selectedArtworkName) === artworkName;
+  });
+
+  return selectedArtworkData;
+}
+
+export function getContentfulArtworkDetailsPageData(data) {
+  return data.items[0].fields.components[1].fields;
 }
 
 export function getContentfulFooterData(data) {
@@ -74,4 +93,8 @@ export function getContentfulMethodologyData(data) {
 export function getContentfulProfileDetail(data) {
   const profileDetailData = data.items[0].fields.components[2].fields;
   return profileDetailData;
+}
+
+export function getContentfulProfileHeroData(data) {
+  return data.items[0].fields.components[1].fields;
 }
