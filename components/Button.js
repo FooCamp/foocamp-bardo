@@ -4,9 +4,12 @@ export default function Button({
   containerStyle,
   onclick,
   ariaLabel,
+  role,
   disabled,
 }) {
+  const roleButton = role || 'button';
   const disabledButton = disabled || false;
+
   return (
     <div className={`button__container ${containerStyle}`}>
       <button
@@ -14,6 +17,7 @@ export default function Button({
         className={buttonstyle}
         onClick={onclick}
         aria-label={ariaLabel}
+        role={roleButton}
         disabled={disabledButton}
       >
         {text}
