@@ -1,6 +1,7 @@
 import ProfileDetail from '../components/ProfileDetail';
 import getPageData from '../utils/api';
 import Methodology from '../components/Methodology/Methodology';
+import HeroProfile from '../components/Hero/HeroProfile';
 
 export const getServerSideProps = async () => {
   const pageData = await getPageData('artista');
@@ -16,6 +17,7 @@ export const getServerSideProps = async () => {
 export default function artista({ data }) {
   return (
     <div>
+      <HeroProfile data={data} />
       <ProfileDetail data={data} />
       <Methodology data={data} />
     </div>
