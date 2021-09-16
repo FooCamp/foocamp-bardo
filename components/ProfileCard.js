@@ -10,17 +10,18 @@ export default function Card({
   };
 
   return (
-    <div className="profile">
+    <article className="profile">
       <div className="profile__image">
         <img src={image} alt="" />
       </div>
       <ProfileTitle text={title} />
       <div className="profile__description">{description}</div>
       <Button
+        containerStyle="profile__button"
         buttonstyle="button button--primary"
         onclick={() => openInNewTab(link)}
         text={buttontext}
       />
-    </div>
+    </article>
   );
 }
