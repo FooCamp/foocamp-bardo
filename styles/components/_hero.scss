@@ -50,6 +50,7 @@
 
     &--child {
       min-height: 293px;
+      max-width: 912px;
     }
 
     &--profile {
@@ -91,6 +92,12 @@
     }
   }
 
+  &__title {
+    &--child {
+      text-align: start;
+    }
+  }
+
   &__body-wrapper {
     &--home {
       padding: 11px 13px 75px 23px;
@@ -114,6 +121,12 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+    }
+
+    &__title {
+      &--child {
+        text-align: center;
+      }
     }
 
     &--child {
