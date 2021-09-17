@@ -1,5 +1,5 @@
 import { getContentfulProfileHeroData } from '../../utils/contentful';
-import { openInCurrentTab } from '../../utils/window';
+import { openInNewTab } from '../../utils/window';
 import HeroTitle from './HeroTitle';
 import HeroTag from './HeroTag';
 import HeroBody from './HeroBody';
@@ -52,7 +52,7 @@ export default function HeroProfile({ data }) {
             buttonstyle="button button--primary button--profile"
             text={buttonText}
             url={buttonLink}
-            onclick={() => openInCurrentTab(buttonLink)}
+            onclick={() => openInNewTab(buttonLink)}
           />
         </div>
       </section>
