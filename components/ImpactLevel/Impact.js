@@ -8,7 +8,7 @@ export default function Impact({ data }) {
   const { sectionTitle, sectionComponents } = impactData;
   return (
     <>
-      {/* <div className="line" /> */}
+      <div className="line" />
       <section className="impact">
         <Container className="impact__header">
           <Title data={sectionTitle} className="impact__title" />
