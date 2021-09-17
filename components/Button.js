@@ -1,5 +1,11 @@
 export default function Button({
-  text, buttonstyle, containerStyle, onclick, ariaLabel, role, disabled,
+  text,
+  buttonstyle,
+  containerStyle,
+  onclick,
+  ariaLabel,
+  role,
+  disabled,
 }) {
   const roleButton = role || 'button';
   const disabledButton = disabled || false;
