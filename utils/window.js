@@ -3,6 +3,7 @@ export const openInNewTab = (url) => {
   if (newWindow) newWindow.opener = null;
 };
 
-export const openInCurrentTab = (url) => {
-  window.location.assign(url);
+export const openInCurrentTab = (url, router = undefined) => {
+  if (router) router.push(url);
+  else window.location.assign(url);
 };
