@@ -5,25 +5,23 @@ import ProfileDetailEl from './ProfileDetailEl';
 
 export default function ProfileDetail({ data }) {
   const detailData = getContentfulProfileDetail(data);
-  const {
-    sectionTitle, sectionComponents,
-  } = detailData;
+  const { sectionTitle, sectionComponents } = detailData;
 
   return (
-    <section className="profile-detail">
-      <Container className="profile-detail__content">
-        <div className="profile-detail__header">
-          <Title data={sectionTitle} className="profile-detail__title" />
-        </div>
-        <div className="profile-detail__list">
-          {sectionComponents.map((detail) => (
-            <ProfileDetailEl
-              detail={detail}
-              key={detail.fields.identifier}
-            />
-          ))}
-        </div>
-      </Container>
-    </section>
+    <>
+      <div className="line" />
+      <section className="profile-detail">
+        <Container className="profile-detail__content">
+          <div className="profile-detail__header">
+            <Title data={sectionTitle} className="profile-detail__title" />
+          </div>
+          <div className="profile-detail__list">
+            {sectionComponents.map((detail) => (
+              <ProfileDetailEl detail={detail} key={detail.fields.identifier} />
+            ))}
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }
