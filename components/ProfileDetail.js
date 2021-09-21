@@ -8,20 +8,17 @@ export default function ProfileDetail({ data }) {
   const { sectionTitle, sectionComponents } = detailData;
 
   return (
-    <>
-      <div className="line" />
-      <section className="profile-detail">
-        <Container className="profile-detail__content">
-          <div className="profile-detail__header">
-            <Title data={sectionTitle} className="profile-detail__title" />
-          </div>
-          <div className="profile-detail__list">
-            {sectionComponents.map((detail) => (
-              <ProfileDetailEl detail={detail} key={detail.fields.identifier} />
-            ))}
-          </div>
-        </Container>
-      </section>
-    </>
+    <section className="profile-detail">
+      <Container className="profile-detail__content">
+        <div className="profile-detail__header">
+          <Title data={sectionTitle} className="profile-detail__title" />
+        </div>
+        <div className="profile-detail__list">
+          {sectionComponents.map((detail) => (
+            <ProfileDetailEl detail={detail} key={detail.fields.identifier} />
+          ))}
+        </div>
+      </Container>
+    </section>
   );
 }
