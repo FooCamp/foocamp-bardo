@@ -1,13 +1,14 @@
 import ArtworkDetails from './ArtworkDetails';
 import Button from '../Button';
-import { openInCurrentTab } from '../../utils/window';
+import { openInCurrentTab, openInNewTab } from '../../utils/window';
 
-export default function ArtworkDetailsBlock({ data }) {
+export default function ArtworkDetailsBlock({ data, buttonData }) {
   const {
     author, dimensions, technique, price, edition, cardDescription, availability,
   } = data.fields;
   const details = { dimensions, technique, price };
-  const buttonText = availability ? 'MÁS INFORMACIÓN DE ESTA OBRA' : 'OBRA NO DISPONIBLE';
+  const { buttonLink, buttonText } = buttonData;
+  const text = availability ? buttonText : 'OBRA NO DISPONIBLE';
 
   return (
     <section className="artwork-details__container">
@@ -22,8 +23,9 @@ export default function ArtworkDetailsBlock({ data }) {
       <div className="artwork-details__cta-container">
         <Button
           buttonstyle="button button--primary button--artwork"
-          text={buttonText}
+          text={text}
           disabled={!availability}
+          onclick={() => openInNewTab(buttonLink)}
         />
         <Button
           buttonstyle="button button--secondary button--artwork button--artwork-return"

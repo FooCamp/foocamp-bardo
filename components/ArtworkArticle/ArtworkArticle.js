@@ -2,7 +2,7 @@ import ArtworkImageGallery from './ArtworkImageGallery';
 import ArtworkDetailsBlock from './ArtworkDetailsBlock';
 import Container from '../Container';
 
-export default function ArtworkArticle({ data, pageData }) {
+export default function ArtworkArticle({ data, pageData, buttonData }) {
   const { heroDescription, heroTag, heroTitle } = pageData;
 
   return (
@@ -16,7 +16,7 @@ export default function ArtworkArticle({ data, pageData }) {
 
         <div className="artwork-article__body-container">
           <ArtworkImageGallery data={data} />
-          <ArtworkDetailsBlock data={data} />
+          <ArtworkDetailsBlock data={data} buttonData={buttonData} />
         </div>
       </Container>
     </article>

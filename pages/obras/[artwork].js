@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { getContentfulArtworkDetailsPageData, getContentfulSingleArtworkData } from '../../utils/contentful';
+import { getContentfulArtworkDetailsPageData, getContentfulSingleArtworkData, getContentfulArtworkDetailsButtonData } from '../../utils/contentful';
 import getPageData from '../../utils/api';
 import ArtworkArticle from '../../components/ArtworkArticle/ArtworkArticle';
 
@@ -20,10 +20,11 @@ export default function Artwork({ data, pageData }) {
   const { artwork: selectedArtworkName } = router.query;
   const artworkData = getContentfulSingleArtworkData(data, selectedArtworkName);
   const detailsPageData = getContentfulArtworkDetailsPageData(pageData);
+  const buttonData = getContentfulArtworkDetailsButtonData(pageData);
 
   return (
     <div className="home">
-      <ArtworkArticle data={artworkData} pageData={detailsPageData} />
+      <ArtworkArticle data={artworkData} pageData={detailsPageData} buttonData={buttonData} />
     </div>
   );
 }
