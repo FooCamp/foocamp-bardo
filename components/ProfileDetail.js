@@ -5,9 +5,7 @@ import ProfileDetailEl from './ProfileDetailEl';
 
 export default function ProfileDetail({ data }) {
   const detailData = getContentfulProfileDetail(data);
-  const {
-    sectionTitle, sectionComponents,
-  } = detailData;
+  const { sectionTitle, sectionComponents } = detailData;
 
   return (
     <section className="profile-detail">
@@ -17,10 +15,7 @@ export default function ProfileDetail({ data }) {
         </div>
         <div className="profile-detail__list">
           {sectionComponents.map((detail) => (
-            <ProfileDetailEl
-              detail={detail}
-              key={detail.fields.identifier}
-            />
+            <ProfileDetailEl detail={detail} key={detail.fields.identifier} />
           ))}
         </div>
       </Container>
