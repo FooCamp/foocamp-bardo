@@ -20,7 +20,7 @@ export default function Statements(props) {
 
   return (
     <section className="statements">
-      <div className="line" />
+      <div className="line line--color-antique-brass" />
       <Container className="statements__wrapper">
         <Statement
           eyebrow={misionEyebrow}

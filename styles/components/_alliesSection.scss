@@ -36,7 +36,8 @@
   padding: 14px 0;
   align-self: end;
   position: relative;
-  top: -99px;
+  top: -105px;
+  z-index: 1;
 
   :last-child {
     border-right: none;
@@ -77,7 +78,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-gap: 0;
-    top: -89px;
+    top: -45px;
     padding: 14px 85px;
 
     &--item {

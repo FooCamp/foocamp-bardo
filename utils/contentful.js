@@ -98,3 +98,7 @@ export function getContentfulProfileDetail(data) {
 export function getContentfulProfileHeroData(data) {
   return data.items[0].fields.components[1].fields;
 }
+
+export function getContentfulArtworkDetailsButtonData(data) {
+  return data.items[0].fields.components[3].fields;
+}

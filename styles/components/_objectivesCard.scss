@@ -26,10 +26,15 @@
 
 .objectivesCard__image {
   width: 50%;
-  margin-left: 25px;
   height: min-content;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+
+@media screen and (min-width: ($tablet-viewport)) {
+  .objectivesCard:nth-child(odd) {
+    padding-right: 24px;
+  }
 }
 
 @media screen and (max-width: ($tablet-viewport)) {

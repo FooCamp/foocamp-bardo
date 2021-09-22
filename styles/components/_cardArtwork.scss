@@ -45,10 +45,11 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    height: 160px;
+    position: relative;
   }
 
   &__image {
-    height: 160px;
     object-fit: cover;
   }
 
@@ -73,7 +74,7 @@
       margin: 25px 0;
     }
 
-    &__image {
+    &__picture {
       height: 300px;
     }
 

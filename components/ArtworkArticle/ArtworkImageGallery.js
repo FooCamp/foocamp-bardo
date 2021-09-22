@@ -38,9 +38,12 @@ export default function ArtworkImageGallery({ data }) {
         </Swiper>
         <Swiper
           onSwiper={setThumbsSwiper}
+          freeMode={false}
+          loop={false}
+          preventInteractionOnTransition
+          touchReleaseOnEdges
           spaceBetween={1}
           slidesPerView={numberPictures}
-          freeMode
           className="artworkImageGallery__navigation"
         >
           {artworkPictures.map((image) => (

@@ -50,6 +50,7 @@
 
     &--child {
       min-height: 293px;
+      max-width: 912px;
     }
 
     &--profile {
@@ -72,7 +73,7 @@
     }
 
     &--child {
-      padding: 43px 0 0 0;
+      padding: 42px 0 0 0;
       top: 0;
     }
 
@@ -88,6 +89,12 @@
 
     &--child {
       padding: 0;
+    }
+  }
+
+  &__title {
+    &--child {
+      text-align: start;
     }
   }
 
@@ -114,6 +121,12 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+    }
+
+    &__title {
+      &--child {
+        text-align: center;
+      }
     }
 
     &--child {

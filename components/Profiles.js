@@ -14,7 +14,9 @@ export default function Profiles(props) {
       <div className="line" />
       <Container className="profiles__header">
         <div className="profiles__title">
-          <Stamp position="right" />
+          <div className="profiles__stamp">
+            <Stamp position="left" />
+          </div>
           <Title data={sectionTitle} />
         </div>
         <div className="profiles__subtitle">
@@ -22,7 +24,7 @@ export default function Profiles(props) {
         </div>
       </Container>
 
-      <div className="profile__container">
+      <Container className="profile__container">
         {sectionComponents.map((component) => (
           <ProfileCard
             key={component.fields.identifier}
@@ -33,7 +35,7 @@ export default function Profiles(props) {
             buttontext={component.fields.cardComponents.fields.buttonText}
           />
         ))}
-      </div>
+      </Container>
     </section>
   );
 }

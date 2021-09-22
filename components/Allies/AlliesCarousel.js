@@ -29,7 +29,6 @@ export default function AlliesCarousel({ data }) {
             />
           </SwiperSlide>
         ))}
-        <SwiperSlide />
       </Swiper>
     </>
   );

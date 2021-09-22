@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router';
-import { kebabize } from '../utils/function';
+import Image from 'next/image';
 import Caption from './Caption';
 import Button from './Button';
+import { kebabize } from '../utils/function';
 
 export default function CardArtwork({ artwork, style, aditionalProps }) {
   const router = useRouter();
@@ -19,10 +20,10 @@ export default function CardArtwork({ artwork, style, aditionalProps }) {
   };
 
   return (
-    <div className="card-artwork" style={style} {...aditionalProps}>
+    <article className="card-artwork" style={style} {...aditionalProps}>
       <div className="card-artwork__header">
         <picture className="card-artwork__picture">
-          <img src={url} alt={title} className="card-artwork__image" draggable="false" />
+          <Image src={`https:${url}`} alt={title} layout="fill" className="card-artwork__image" draggable="false" />
         </picture>
         <div className="card-artwork__details">
           <div className="card-artwork__title">{cardTitle}</div>
@@ -43,6 +44,6 @@ export default function CardArtwork({ artwork, style, aditionalProps }) {
           />
         </div>
       </div>
-    </div>
+    </article>
   );
 }
