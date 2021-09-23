@@ -23,7 +23,7 @@ export default function Artwork({ data, pageData }) {
   const buttonData = getContentfulArtworkDetailsButtonData(pageData);
 
   return (
-    <div className="home">
+    <div className="artwork-page">
       <ArtworkArticle data={artworkData} pageData={detailsPageData} buttonData={buttonData} />
     </div>
   );
