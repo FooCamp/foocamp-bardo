@@ -4,7 +4,7 @@ import { openInCurrentTab, openInNewTab } from '../../utils/window';
 
 export default function ArtworkDetailsBlock({ data, buttonData }) {
   const {
-    author, dimensions, technique, price, edition, cardDescription, availability,
+    author, dimensions, cardTitle, technique, price, edition, cardDescription, availability,
   } = data.fields;
   const details = { dimensions, technique, price };
   const { buttonLink, buttonText } = buttonData;
@@ -14,7 +14,13 @@ export default function ArtworkDetailsBlock({ data, buttonData }) {
     <section className="artwork-details__container">
       <div className="artwork-details__information-container">
         <h4 className="artwork-details__title">{ author }</h4>
-        <h6 className="artwork-details__title-year">{edition}</h6>
+        <h6 className="artwork-details__title-year">
+          {cardTitle}
+          {' '}
+          (
+          {edition}
+          )
+        </h6>
         <div className="artwork-details__separator" />
         <ArtworkDetails data={details} />
         <div className="artwork-details__separator" />
