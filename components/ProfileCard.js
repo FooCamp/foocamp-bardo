@@ -1,13 +1,12 @@
+import { useRouter } from 'next/router';
 import Button from './Button';
 import ProfileTitle from './ProfileTitle';
+import { openInCurrentTab } from '../utils/window';
 
 export default function Card({
   title, description, link, image, buttontext,
 }) {
-  const openInNewTab = (url) => {
-    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
-    if (newWindow) newWindow.opener = null;
-  };
+  const router = useRouter();
 
   return (
     <article className="profile">
@@ -19,7 +18,7 @@ export default function Card({
       <Button
         containerStyle="profile__button"
         buttonstyle="button button--primary"
-        onclick={() => openInNewTab(link)}
+        onclick={() => openInCurrentTab(link, router)}
         text={buttontext}
       />
     </article>

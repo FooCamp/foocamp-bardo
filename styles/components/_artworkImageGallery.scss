@@ -17,6 +17,7 @@
 
 .artworkImageGallery__thumbs--item {
   width: auto;
+  max-height: 100px;
 }
 
 .artworkImageGallery__container {
@@ -25,7 +26,7 @@
 
 .artworkImageGallery__navigation {
   padding: 30px 130px !important;
-  height: 30%;
+  height: 160px;
 }
 
 .artworkImageGallery__navigation .swiper-slide {
