@@ -1,25 +1,29 @@
 import getPageData from '../utils/api';
-import ImpactLevel from '../components/ImpactLevel/Impact';
-import Methodology from '../components/Methodology/Methodology';
-import HeroChild from '../components/Hero/HeroChild';
+import { getContentfulComponentList } from '../utils/contentful';
+import pageComponentPool from '../utils/pageComponentPool';
+import ComponentList from '../components/ComponentList';
 
 export const getServerSideProps = async () => {
   const pageData = await getPageData('que-hacemos');
+  const componentNameList = getContentfulComponentList(pageData);
 
   return {
     props: {
       data: { ...pageData },
-      components: [] /* pageData.fields.components */,
+      componentNameList,
     },
   };
 };
 
-export default function QueHacemos({ data }) {
+export default function QueHacemos({ data, componentNameList }) {
+  console.log(data);
   return (
     <div>
-      <HeroChild data={data} />
-      <ImpactLevel data={data} />
-      <Methodology data={data} />
+      <ComponentList
+        data={data}
+        componentList={pageComponentPool}
+        componentNameList={componentNameList}
+      />
     </div>
   );
 }

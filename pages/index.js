@@ -1,27 +1,28 @@
 import getPageData from '../utils/api';
-import Artwork from '../components/Artwork';
-import HeroHome from '../components/Hero/HeroHome';
-import Profiles from '../components/Profiles';
-import Allies from '../components/Allies/AlliesSection';
+import { getContentfulComponentList } from '../utils/contentful';
+import ComponentList from '../components/ComponentList';
+import pageComponentPool from '../utils/pageComponentPool';
 
 export const getServerSideProps = async () => {
   const pageData = await getPageData('home');
+  const componentNameList = getContentfulComponentList(pageData);
 
   return {
     props: {
       data: pageData,
-      components: [] /* pageData.fields.components */,
+      componentNameList,
     },
   };
 };
 
-export default function Home({ data }) {
+export default function Home({ data, componentNameList }) {
   return (
     <div className="home">
-      <HeroHome data={data} />
-      <Profiles data={data} />
-      <Artwork data={data} />
-      <Allies data={data} />
+      <ComponentList
+        data={data}
+        componentList={pageComponentPool}
+        componentNameList={componentNameList}
+      />
     </div>
   );
 }

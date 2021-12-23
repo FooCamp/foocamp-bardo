@@ -1,25 +1,28 @@
-import ProfileDetail from '../components/ProfileDetail';
 import getPageData from '../utils/api';
-import Methodology from '../components/Methodology/Methodology';
-import HeroProfile from '../components/Hero/HeroProfile';
+import { getContentfulComponentList } from '../utils/contentful';
+import ComponentList from '../components/ComponentList';
+import pageComponentPool from '../utils/pageComponentPool';
 
 export const getServerSideProps = async () => {
   const pageData = await getPageData('artista');
+  const componentNameList = getContentfulComponentList(pageData);
 
   return {
     props: {
       data: { ...pageData },
-      components: [] /* pageData.fields.components */,
+      componentNameList,
     },
   };
 };
 
-export default function artista({ data }) {
+export default function artista({ data, componentNameList }) {
   return (
     <div>
-      <HeroProfile data={data} />
-      <ProfileDetail data={data} />
-      <Methodology data={data} />
+      <ComponentList
+        data={data}
+        componentList={pageComponentPool}
+        componentNameList={componentNameList}
+      />
     </div>
   );
 }
