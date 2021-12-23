@@ -9,7 +9,10 @@ export default function Layout({ data, pageData, children }) {
     <div className="layout">
       <Head>
         <link rel="shortcut icon" href="../favicon.png" />
-        <title>{title}</title>
+        <title>
+          {title}
+          {' | Bardo colectivo'}
+        </title>
       </Head>
       <Navigation {...children} />
       <div className="page-content">{children}</div>

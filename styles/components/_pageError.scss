@@ -1,0 +1,14 @@
+.page-error {
+  text-align: center;
+  padding: 100px 20px;
+
+  &__image {
+    width: 120px;
+    border-radius: 50%;
+    margin: 20px;
+  }
+
+  &__button {
+    margin-top: 20px;
+  }
+}
